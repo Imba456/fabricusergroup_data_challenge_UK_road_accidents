@@ -1,0 +1,690 @@
+{
+  "config": "{\"version\":\"5.50\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2},\"customTheme\":{\"name\":\"Custom47809618154145905.json\",\"version\":\"5.48\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [
+    "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Custom47809618154145905.json",
+            "path": "Custom47809618154145905.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Car Types",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"112a0edfd6e39cde8e61\",\"layouts\":[{\"id\":0,\"position\":{\"x\":993.8461538461538,\"y\":0,\"z\":4000,\"width\":286.15384615384613,\"height\":110.76923076923076,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Moving Average N days.Moving Average N days\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"},\"Name\":\"Moving Average N days.Moving Average N days\",\"NativeReferenceName\":\"Moving Average N days\"}]},\"syncGroup\":{\"groupName\":\"Moving Average N days\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"numericStart\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 110.77,
+          "width": 286.15,
+          "x": 993.85,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"2357944c52b8628943a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":695.3846153846154,\"y\":63.07692307692307,\"z\":2000,\"width\":454.6153846153846,\"height\":296.9230769230769,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"},{\"queryRef\":\"_Measures.3 Month Window Average\"}],\"Category\":[{\"queryRef\":\"collisions.date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"},\"Name\":\"collisions.date\",\"NativeReferenceName\":\"date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Window Average of Collisions\"},\"Name\":\"_Measures.3 Month Window Average\",\"NativeReferenceName\":\"Window Average of Collisions\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 296.92,
+          "width": 454.62,
+          "x": 695.38,
+          "y": 63.08,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"36b4aa64258cdd41c47d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":720,\"y\":22.22222222222222,\"z\":5000,\"width\":487.77777777777777,\"height\":41.11111111111111,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions by Day and Moving Average +/- \"},{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"Value\"}}},{\"value\":\" days\"}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]}}}",
+          "filters": "[]",
+          "height": 41.11,
+          "width": 487.78,
+          "x": 720.00,
+          "y": 22.22,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"56bf61b58b82afcfa8da\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":513.3333333333334,\"height\":318.88888888888886,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.engine_capacity_cc (bins)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(vehicles.Vehicle Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vehicle Count\"}},\"Function\":0},\"Name\":\"Sum(vehicles.Vehicle Count)\",\"NativeReferenceName\":\"Sum of Vehicle Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc (bins)\"},\"Name\":\"vehicles.engine_capacity_cc (bins)\",\"NativeReferenceName\":\"engine_capacity_cc (bins)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vehicle Count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"engine_capacity_cc\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc\"}},\"Right\":{\"Literal\":{\"Value\":\"-1L\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false},{\"name\":\"Filterefe8d6980d121b5b0074\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"vehicle_type\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 318.89,
+          "width": 513.33,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b47c803970bb7a9807a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":566,\"y\":346,\"width\":714,\"height\":319,\"z\":3000,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}],\"Y\":[{\"queryRef\":\"Avg(collisions.latitude)\"}],\"X\":[{\"queryRef\":\"Avg(collisions.longitude)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"latitude\"},\"Name\":\"Avg(collisions.latitude)\",\"NativeReferenceName\":\"latitude\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"longitude\"},\"Name\":\"Avg(collisions.longitude)\",\"NativeReferenceName\":\"longitude\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 319.00,
+          "width": 714.00,
+          "x": 566.00,
+          "y": 346.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b892e92805b068ed9e26\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":345.7142857142857,\"z\":1000,\"width\":565.7142857142858,\"height\":318.5714285714286,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(vehicles.Vehicle Count)\"}],\"Category\":[{\"queryRef\":\"vehicles.Model Groups\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vehicle Count\"}},\"Function\":0},\"Name\":\"Sum(vehicles.Vehicle Count)\",\"NativeReferenceName\":\"Sum of Vehicle Count\"},{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vehicle Count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"Filter579cbef221fb4fa6375a\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'-1'\"}}]]}}}}}]},\"type\":\"Exclude\",\"howCreated\":4}]",
+          "height": 318.57,
+          "width": 565.71,
+          "x": 0.00,
+          "y": 345.71,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Binned Map - Not Working",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection2d65139ee3221d18caf5",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0232c324efdbca426d32\",\"layouts\":[{\"id\":0,\"position\":{\"x\":57.85714285714286,\"y\":520.7142857142858,\"z\":3000,\"width\":337.14285714285717,\"height\":173.57142857142858,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"can't use a parameter in a column calc\"}]},{\"textRuns\":[{\"value\":\"can't use long/l;ats as measures\"}]},{\"textRuns\":[{\"value\":\"dynamic updates based on a measure instead?\"}]},{\"textRuns\":[{\"value\":\"Possible but dynamic column for location reference possible\"}]},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 173.57,
+          "width": 337.14,
+          "x": 57.86,
+          "y": 520.71,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1a034a5123973384b273\",\"layouts\":[{\"id\":0,\"position\":{\"x\":465.00000000000006,\"y\":537.8571428571429,\"z\":2000,\"width\":237.85714285714286,\"height\":121.42857142857143,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Location Binning.Location Binning\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Location Binning\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location Binning\"},\"Name\":\"Location Binning.Location Binning\",\"NativeReferenceName\":\"Location Binning\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"numericStart\":{\"expr\":{\"Literal\":{\"Value\":\"0.08D\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Single'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Location Binning\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location Binning\"}},\"Right\":{\"Literal\":{\"Value\":\"0.08D\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 121.43,
+          "width": 237.86,
+          "x": 465.00,
+          "y": 537.86,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"48b38bb52747d0edfc0f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":401.6666666666667,\"y\":0,\"z\":4000,\"width\":326.6666666666667,\"height\":461.6666666666667,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Y\":[{\"queryRef\":\"collisions.Latitude Bin\"}],\"X\":[{\"queryRef\":\"collisions.Longitude Bin\"}],\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Latitude Bin\"},\"Name\":\"collisions.Latitude Bin\",\"NativeReferenceName\":\"Latitude Bin\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Longitude Bin\"},\"Name\":\"collisions.Longitude Bin\",\"NativeReferenceName\":\"Longitude Bin\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 461.67,
+          "width": 326.67,
+          "x": 401.67,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"69d99e925ed9f2c990be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":792.8571428571429,\"y\":10.714285714285715,\"z\":1000,\"width\":342.8571428571429,\"height\":338.5714285714286,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}],\"Tooltips\":[{\"queryRef\":\"Location Binning.Location Binning Value\"}],\"Y\":[{\"queryRef\":\"collisions.Latitude Measure\"}],\"X\":[{\"queryRef\":\"collisions.Longitude Measure\"}],\"Category\":[{\"queryRef\":\"collisions.accident_reference\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location Binning\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location Binning Value\"},\"Name\":\"Location Binning.Location Binning Value\",\"NativeReferenceName\":\"Location Binning Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Latitude Measure\"},\"Name\":\"collisions.Latitude Measure\",\"NativeReferenceName\":\"Latitude Measure\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Longitude Measure\"},\"Name\":\"collisions.Longitude Measure\",\"NativeReferenceName\":\"Longitude Measure\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"accident_reference\"},\"Name\":\"collisions.accident_reference\",\"NativeReferenceName\":\"accident_reference\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbles\":[{\"properties\":{\"markerRangeType\":{\"expr\":{\"Literal\":{\"Value\":\"'dataRange'\"}}},\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 338.57,
+          "width": 342.86,
+          "x": 792.86,
+          "y": 10.71,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7cda40f8abc319a85898\",\"layouts\":[{\"id\":0,\"position\":{\"x\":786.4285714285714,\"y\":381.42857142857144,\"z\":5000,\"width\":343.5714285714286,\"height\":338.5714285714286,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}],\"Tooltips\":[{\"queryRef\":\"Location Binning.Location Binning Value\"}],\"Y\":[{\"queryRef\":\"_Measures.Dynamic Latitude Measure\"}],\"X\":[{\"queryRef\":\"_Measures.Dynamic Longitude Measure\"}],\"Category\":[{\"queryRef\":\"collisions.accident_index\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location Binning\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location Binning Value\"},\"Name\":\"Location Binning.Location Binning Value\",\"NativeReferenceName\":\"Location Binning Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Dynamic Latitude Measure\"},\"Name\":\"_Measures.Dynamic Latitude Measure\",\"NativeReferenceName\":\"Dynamic Latitude Measure\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Dynamic Longitude Measure\"},\"Name\":\"_Measures.Dynamic Longitude Measure\",\"NativeReferenceName\":\"Dynamic Longitude Measure\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"accident_index\"},\"Name\":\"collisions.accident_index\",\"NativeReferenceName\":\"accident_index\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"bubbles\":[{\"properties\":{\"markerRangeType\":{\"expr\":{\"Literal\":{\"Value\":\"'dataRange'\"}}},\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 338.57,
+          "width": 343.57,
+          "x": 786.43,
+          "y": 381.43,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"8caeef46de5f0acfc3d3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":343.33333333333337,\"height\":461.6666666666667,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}],\"Y\":[{\"queryRef\":\"Avg(collisions.latitude)\"}],\"X\":[{\"queryRef\":\"Avg(collisions.longitude)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"latitude\"},\"Name\":\"Avg(collisions.latitude)\",\"NativeReferenceName\":\"latitude\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"longitude\"},\"Name\":\"Avg(collisions.longitude)\",\"NativeReferenceName\":\"longitude\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 461.67,
+          "width": 343.33,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"af8280531614af666d53\",\"target\":\"f5c7c1fd193beefe576b\",\"type\":1}],\"visibility\":1}",
+      "displayName": "Proportional Brushing & Sort by Parameter",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection331fb8ac3ec3419cc227",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3061051c8af481ac5dd4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":463,\"y\":0,\"width\":443,\"height\":720,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"collisions.light_conditions\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"light_conditions\"},\"Name\":\"collisions.light_conditions\",\"NativeReferenceName\":\"light_conditions\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 443.00,
+          "x": 463.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"aa41d834068eb38c6042\",\"layouts\":[{\"id\":0,\"position\":{\"x\":906.6666666666666,\"y\":64.44444444444444,\"z\":2000,\"width\":364.44444444444446,\"height\":511.1111111111111,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"collisions.weather_conditions\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"weather_conditions\"},\"Name\":\"collisions.weather_conditions\",\"NativeReferenceName\":\"weather_conditions\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 511.11,
+          "width": 364.44,
+          "x": 906.67,
+          "y": 64.44,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"af8280531614af666d53\",\"layouts\":[{\"id\":0,\"position\":{\"x\":449.28571428571433,\"y\":106.42857142857143,\"z\":3000,\"width\":569.2857142857143,\"height\":602.1428571428572,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"collisions.police_force\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"police_force\"},\"Name\":\"collisions.police_force\",\"NativeReferenceName\":\"police_force\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 602.14,
+          "width": 569.29,
+          "x": 449.29,
+          "y": 106.43,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"cdab5b796efa82775cf3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":684.2857142857143,\"y\":332.8571428571429,\"z\":4000,\"width\":257.8571428571429,\"height\":150,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"Filtereaa74b1a40453771030c\",\"expression\":{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"generic_make_model\"}}]}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"}}}],\"Top\":8}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 150.00,
+          "width": 257.86,
+          "x": 684.29,
+          "y": 332.86,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f5c7c1fd193beefe576b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":442.8571428571429,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Tooltips\":[{\"queryRef\":\"_Measures.% of Total\"}],\"Y\":[{\"queryRef\":\"_Measures.Total Collision Count\"},{\"queryRef\":\"_Measures.Collisions\"}],\"Category\":[{\"queryRef\":\"vehicles.Model Groups\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Collisions\"},\"Name\":\"_Measures.Total Collision Count\",\"NativeReferenceName\":\"Total Collisions1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"% of Total\"},\"Name\":\"_Measures.% of Total\",\"NativeReferenceName\":\"% of Total1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Collisions\"}}}]},\"columnProperties\":{\"_Measures.% of Total\":{\"displayName\":\"% of Total\"},\"_Measures.Total Collision Count\":{\"displayName\":\"Total Collisions\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"_Measures.Total Collision Count\"}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}},{\"properties\":{\"dynamicLabelValue\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% of Total\"}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"_Measures.Collisions\",\"highlightMatching\":1}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#12239E'\"}}}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}}]}}}",
+          "filters": "[{\"expression\":{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"generic_make_model\"}}]}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 442.86,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Location Inspection",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3c5ff45a3987c577c676",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"042f280e1b6a5f5f872a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":635.7142857142858,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Y\":[{\"queryRef\":\"collisions.Latitude Bin\"}],\"X\":[{\"queryRef\":\"collisions.Longitude Bin\"}],\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Latitude Bin\"},\"Name\":\"collisions.Latitude Bin\",\"NativeReferenceName\":\"Latitude Bin\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Longitude Bin\"},\"Name\":\"collisions.Longitude Bin\",\"NativeReferenceName\":\"Longitude Bin\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"unit\":{\"expr\":{\"Literal\":{\"Value\":\"'pixels'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 635.71,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9c59d6e1e242cd895caa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":789,\"y\":0,\"width\":451,\"height\":300,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"collisions.police_force\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"police_force\"},\"Name\":\"collisions.police_force\",\"NativeReferenceName\":\"police_force\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 451.00,
+          "x": 789.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e1efcf0bae4bccec5612\",\"layouts\":[{\"id\":0,\"position\":{\"x\":789,\"y\":300,\"width\":451,\"height\":420,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.Model Groups\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"},{\"queryRef\":\"Sum(vehicles.Vehicle Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vehicle Count\"}},\"Function\":0},\"Name\":\"Sum(vehicles.Vehicle Count)\",\"NativeReferenceName\":\"Sum of Vehicle Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 420.00,
+          "width": 451.00,
+          "x": 789.00,
+          "y": 300.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Total QTD Collisions",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3dab1ff2238feab56c66",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f8088a6b64a776af9b56\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":80,\"z\":0,\"width\":1270,\"height\":560,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"_Dates.Year Quarter\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.% Diff QTD Collisions LY\"}],\"Y2\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_1\",\"Entity\":\"_Dates\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Year Quarter\"},\"Name\":\"_Dates.Year Quarter\",\"NativeReferenceName\":\"Year Quarter\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"% Diff QTD Collisions LY\"},\"Name\":\"_Measures.% Diff QTD Collisions LY\",\"NativeReferenceName\":\"% Diff QTD Collisions LY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% Diff QTD Collisions LY\"}},\"FillRule\":{\"linearGradient3\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#E66C37'\"}}},\"mid\":{\"color\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}},\"value\":{\"Literal\":{\"Value\":\"0D\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualTooltip\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% Diff YTD from Last Years Collisions\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"% Diff YTD from Last Years Collisions\"}},\"Right\":{\"Literal\":{\"Value\":\"-0.99D\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 560.00,
+          "width": 1270.00,
+          "x": 0.00,
+          "y": 80.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"a1afc1a6be0c8360cf7f\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"a1afc1a6be0c8360cf7f\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"a1afc1a6be0c8360cf7f\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"a1afc1a6be0c8360cf7f\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"460cafffb102004649fc\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"460cafffb102004649fc\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"460cafffb102004649fc\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"460cafffb102004649fc\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"b80854d03deb7f5587d6\",\"target\":\"df1179ff3f69bc76a132\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"df1179ff3f69bc76a132\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"cb163887dd97f4019874\",\"type\":1},{\"source\":\"f287a66394cb5e9a982f\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"df1179ff3f69bc76a132\",\"target\":\"f287a66394cb5e9a982f\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"c329cfea61f407eb8ffb\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"df1179ff3f69bc76a132\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"f287a66394cb5e9a982f\",\"type\":1},{\"source\":\"cb163887dd97f4019874\",\"target\":\"9fe240a2d3cefa3982dd\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"f287a66394cb5e9a982f\",\"type\":1},{\"source\":\"c329cfea61f407eb8ffb\",\"target\":\"df1179ff3f69bc76a132\",\"type\":1},{\"source\":\"9fe240a2d3cefa3982dd\",\"target\":\"f287a66394cb5e9a982f\",\"type\":1},{\"source\":\"9fe240a2d3cefa3982dd\",\"target\":\"df1179ff3f69bc76a132\",\"type\":1},{\"source\":\"9fe240a2d3cefa3982dd\",\"target\":\"460cafffb102004649fc\",\"type\":1},{\"source\":\"9fe240a2d3cefa3982dd\",\"target\":\"a1afc1a6be0c8360cf7f\",\"type\":1}],\"type\":0}",
+      "displayName": "How much DAX can I fit in?",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 4000.00,
+      "name": "ReportSection4d499954c3805b8196d2",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"135a93cdfeefc6059e6a\",\"layouts\":[{\"id\":0,\"position\":{\"height\":576.9135802469135,\"width\":1280,\"x\":0,\"y\":910.8641975308642,\"z\":7000,\"tabOrder\":7000}}],\"singleVisualGroup\":{\"displayName\":\"Group 2\",\"groupMode\":0}}",
+          "height": 576.91,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 910.86,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"25a122a644888222cb2c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":21.818181818181817,\"z\":2000,\"width\":1280,\"height\":176.36363636363635,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"CAR COLLISIONS IN THE UK\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"54pt\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"How much DAX can I fit in?\",\"textStyle\":{\"fontStyle\":\"italic\",\"fontSize\":\"28pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 176.36,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 21.82,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"25ab7faa44810e83f7ca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":264.44444444444446,\"z\":8000,\"width\":1280,\"height\":555.5555555555555,\"tabOrder\":4000}}],\"singleVisualGroup\":{\"displayName\":\"Group 3\",\"groupMode\":0}}",
+          "height": 555.56,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 264.44,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"2ce4beb61b441f043125\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1241.8181818181818,\"y\":0,\"z\":5000,\"width\":38.18181818181818,\"height\":40,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'information'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"glow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"19D\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Created for the London Fabric User Group''s OPEN DATA CHALLENGE to practice and enhance my DAX skills. This is by no intention a deep dive into the data and is focused only on data that contains collisions with cars involved for which we have a model description.'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 38.18,
+          "x": 1241.82,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"35a28c0d73b52c6e6d25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":100,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}},{\"value\":\" by Car & Generic Model with Nested Sorting\",\"textStyle\":{\"fontSize\":\"28pt\"}}]},{\"textRuns\":[{\"value\":\"Click on other charts to see which Generic Models are\",\"textStyle\":{\"fontSize\":\"18.6667px\"}},{\"value\":\" Above or \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18.6667px\",\"color\":\"#12239e\"}},{\"value\":\"Below\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18.6667px\",\"color\":\"#a0d1ff\"}},{\"value\":\" \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18.6667px\",\"color\":\"#12239e\"}},{\"value\":\"the Car Model Averages\",\"textStyle\":{\"fontSize\":\"18.6667px\"}}]},{\"textRuns\":[{\"value\":\"\"}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"808f94cf03a3b74334d6\"}",
+          "filters": "[]",
+          "height": 100.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"36858dd9ebe4f943e5bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5000,\"width\":1011.1111111111111,\"height\":100,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}},{\"value\":\" by Day & \",\"textStyle\":{\"fontSize\":\"28pt\"}},{\"value\":\"Moving Average\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\",\"color\":\"#12239e\"}},{\"value\":\" +/- \",\"textStyle\":{\"fontSize\":\"28pt\"}},{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"Value\"}},\"textStyle\":{\"fontSize\":\"28pt\"}},{\"value\":\" days\",\"textStyle\":{\"fontSize\":\"28pt\"}}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]}},\"parentGroupName\":\"25ab7faa44810e83f7ca\"}",
+          "filters": "[]",
+          "height": 100.00,
+          "width": 1011.11,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"43f27e38e89504f41945\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":100,\"z\":4000,\"width\":1280,\"height\":455.55555555555554,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Collisions\"},{\"queryRef\":\"_Measures.3 Month Window Average\"}],\"Category\":[{\"queryRef\":\"collisions.date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"},\"Name\":\"collisions.date\",\"NativeReferenceName\":\"date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Window Average of Collisions\"},\"Name\":\"_Measures.3 Month Window Average\",\"NativeReferenceName\":\"Window Average of Collisions\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}}],\"lineStyles\":[{\"properties\":{\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualTooltip\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},\"parentGroupName\":\"25ab7faa44810e83f7ca\"}",
+          "filters": "[]",
+          "height": 455.56,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 100.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"45698f8eb75929f60eb1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":680,\"y\":1618.3333333333335,\"z\":9000,\"width\":600,\"height\":735,\"tabOrder\":13000}}],\"singleVisualGroup\":{\"displayName\":\"Group 4\",\"groupMode\":0}}",
+          "height": 735.00,
+          "width": 600.00,
+          "x": 680.00,
+          "y": 1618.33,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"460cafffb102004649fc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":769.1666666666667,\"y\":2888.1481481481483,\"z\":6000,\"width\":450,\"height\":300,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.age_band_of_driver\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Vehicles\"}],\"Tooltips\":[{\"queryRef\":\"CountNonNull(vehicles.age_of_driver)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Vehicles\"},\"Name\":\"_Measures.Vehicles\",\"NativeReferenceName\":\"Vehicles\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"age_band_of_driver\"},\"Name\":\"vehicles.age_band_of_driver\",\"NativeReferenceName\":\"age_band_of_driver\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"age_of_driver\"}},\"Function\":3},\"Name\":\"CountNonNull(vehicles.age_of_driver)\",\"NativeReferenceName\":\"Min of age_of_driver\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"age_of_driver\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterf0ed11c2a82f733e9e1a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"age_band_of_driver\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"age_band_of_driver\"}},\"Right\":{\"Literal\":{\"Value\":\"'missing'\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"Filter1ace5a4aa340ef5d6bb7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"engine_capacity_cc\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc\"}},\"Right\":{\"Literal\":{\"Value\":\"-1L\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"Filter7b97771fd9b69191b251\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"engine_capacity_cc (bins)\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc (bins)\"}},\"Right\":{\"Literal\":{\"Value\":\"5000L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"Filter1be5eaa2e98c9a87fd50\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"age_of_driver\"}},\"Function\":3}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3},{\"name\":\"Filterefe8d6980d121b5b0074\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"vehicle_type\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"ordinal\":4},{\"name\":\"Filterfe7002d3d3d412106c1e\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Vehicles\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":5}]",
+          "height": 300.00,
+          "width": 450.00,
+          "x": 769.17,
+          "y": 2888.15,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"513699f1b20e3101bc56\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":9500,\"width\":600,\"height\":100,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}},{\"value\":\" by Car Model\",\"textStyle\":{\"fontSize\":\"28pt\"}}]},{\"textRuns\":[{\"value\":\"Click on other Charts to see the \",\"textStyle\":{\"fontSize\":\"18.6667px\"}},{\"value\":\"Proportion of Total\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"18.6667px\",\"color\":\"#12239e\"}}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"45698f8eb75929f60eb1\"}",
+          "filters": "[]",
+          "height": 100.00,
+          "width": 600.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 9500.00
+        },
+        {
+          "config": "{\"name\":\"51ef9ec71f99139fb0e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":178.18181818181816,\"z\":4000,\"width\":1280,\"height\":12.727272727272727,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'pill'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 12.73,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 178.18,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"573f9ee0136f8e1b4891\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":12001,\"width\":298.88888888888886,\"height\":33.333333333333336,\"tabOrder\":14001}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collision Locations Binned\"}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}},\"parentGroupName\":\"f9c88843d8c9efe6a4d1\"}",
+          "filters": "[]",
+          "height": 33.33,
+          "width": 298.89,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 12001.00
+        },
+        {
+          "config": "{\"name\":\"670bf50873621d401fec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":9500,\"width\":1280,\"height\":101.11111111111111,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}},{\"value\":\" by Year/Quarter & \",\"textStyle\":{\"fontSize\":\"28pt\"}},{\"value\":\"% Diff from Last Years Q\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\",\"color\":\"#e66c37\"}}]},{\"textRuns\":[{\"value\":\"Drilldown for more detail at a Month level\",\"textStyle\":{\"fontSize\":\"14pt\"}}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]}},\"parentGroupName\":\"135a93cdfeefc6059e6a\"}",
+          "filters": "[]",
+          "height": 101.11,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 9500.00
+        },
+        {
+          "config": "{\"name\":\"6fbac525001c2ba2724d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1056.6666666666667,\"y\":3244.4444444444443,\"z\":17000,\"width\":162.22222222222223,\"height\":33.333333333333336,\"tabOrder\":17000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Weather\",\"textStyle\":{\"fontWeight\":\"bold\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.33,
+          "width": 162.22,
+          "x": 1056.67,
+          "y": 3244.44,
+          "z": 17000.00
+        },
+        {
+          "config": "{\"name\":\"722ef655e1d2cf7e8227\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1010.8333333333334,\"y\":0,\"z\":1000,\"width\":269.1666666666667,\"height\":54.16666666666667,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Created by: \\t@RobbinVernooij\"}]},{\"textRuns\":[{\"value\":\"\\t\\t\\t\\t\\tThe Data School\"}]}]}}]}},\"parentGroupName\":\"8d4d39b2db06fe87001d\"}",
+          "filters": "[]",
+          "height": 54.17,
+          "width": 269.17,
+          "x": 1010.83,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7918c7315b15b2953640\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1056.6666666666667,\"y\":3600,\"z\":18000,\"width\":162.22222222222223,\"height\":33.333333333333336,\"tabOrder\":18000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Visibility\",\"textStyle\":{\"fontWeight\":\"bold\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.33,
+          "width": 162.22,
+          "x": 1056.67,
+          "y": 3600.00,
+          "z": 18000.00
+        },
+        {
+          "config": "{\"name\":\"7c329a62ad5316478de9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1056.6666666666667,\"y\":2887.777777777778,\"z\":16000,\"width\":162.22222222222223,\"height\":33.333333333333336,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Driver Age\",\"textStyle\":{\"fontWeight\":\"bold\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.33,
+          "width": 162.22,
+          "x": 1056.67,
+          "y": 2887.78,
+          "z": 16000.00
+        },
+        {
+          "config": "{\"name\":\"808f94cf03a3b74334d6\",\"layouts\":[{\"id\":0,\"position\":{\"height\":1467.530864197531,\"width\":1280,\"x\":0,\"y\":2432.222222222222,\"z\":13000,\"tabOrder\":12000}}],\"singleVisualGroup\":{\"displayName\":\"Group 7\",\"groupMode\":0}}",
+          "height": 1467.53,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 2432.22,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"8376a68d95e6a41f042b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1010.9090909090909,\"y\":11.21212121212119,\"z\":6000,\"width\":247.27272727272725,\"height\":120.90909090909089,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Moving Average N days.Moving Average N days\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"},\"Name\":\"Moving Average N days.Moving Average N days\",\"NativeReferenceName\":\"Moving Average N days\"}]},\"syncGroup\":{\"groupName\":\"Moving Average N days\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"numericStart\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Right\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}}],\"numericInputStyle\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"slider\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"81D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}},\"parentGroupName\":\"25ab7faa44810e83f7ca\"}",
+          "filters": "[]",
+          "height": 120.91,
+          "width": 247.27,
+          "x": 1010.91,
+          "y": 11.21,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"8d4d39b2db06fe87001d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":3946.6666666666665,\"z\":3000,\"width\":1280,\"height\":53.33333333333333,\"tabOrder\":1000}}],\"singleVisualGroup\":{\"displayName\":\"Group 1\",\"groupMode\":0}}",
+          "height": 53.33,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 3946.67,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"9619e91220b70bfbed94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":655.8333333333334,\"height\":54.16666666666667,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Source: \\tDepartment of Transport, UK, Road Traffic Statistics 2018 - 2022 \"}]},{\"textRuns\":[{\"value\":\"\\t\\t\\t\\thttps://roadtraffic.dft.gov.uk/custom-downloads/road-accidents\"}]}]}}]}},\"parentGroupName\":\"8d4d39b2db06fe87001d\"}",
+          "filters": "[]",
+          "height": 54.17,
+          "width": 655.83,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9bae41699eaf5e0013cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1056.6666666666667,\"y\":2532.222222222222,\"z\":15000,\"width\":162.22222222222223,\"height\":33,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Engine Size\",\"textStyle\":{\"fontWeight\":\"bold\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.00,
+          "width": 162.22,
+          "x": 1056.67,
+          "y": 2532.22,
+          "z": 15000.00
+        },
+        {
+          "config": "{\"name\":\"9fe240a2d3cefa3982dd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":99.75308641975315,\"z\":1000,\"width\":655.5555555555555,\"height\":1367.7777777777778,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.Model Groups Hierarchy.Model Groups\",\"active\":true},{\"queryRef\":\"vehicles.Model Groups Hierarchy.generic_make_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}],\"Tooltips\":[{\"queryRef\":\"_Measures.Nested Sorting Model and Generic Model\"},{\"queryRef\":\"_Measures.Average by Model\"},{\"queryRef\":\"_Measures.Above Model Average\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Hierarchy\":\"Model Groups Hierarchy\"}},\"Level\":\"Model Groups\"},\"Name\":\"vehicles.Model Groups Hierarchy.Model Groups\",\"NativeReferenceName\":\"Model Groups Hierarchy Model Groups\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Hierarchy\":\"Model Groups Hierarchy\"}},\"Level\":\"generic_make_model\"},\"Name\":\"vehicles.Model Groups Hierarchy.generic_make_model\",\"NativeReferenceName\":\"Model Groups Hierarchy generic_make_model\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Nested Sorting Model and Generic Model\"},\"Name\":\"_Measures.Nested Sorting Model and Generic Model\",\"NativeReferenceName\":\"Nested Sorting Model and Generic Model\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Above Model Average\"},\"Name\":\"_Measures.Above Model Average\",\"NativeReferenceName\":\"Above Model Average\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average by Model\"},\"Name\":\"_Measures.Average by Model\",\"NativeReferenceName\":\"Average by Model\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Nested Sorting Model and Generic Model\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Above Model Average\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#DEEFFF'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Above Model Average\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#12239E'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"808f94cf03a3b74334d6\"}",
+          "filters": "[]",
+          "height": 1367.78,
+          "width": 655.56,
+          "x": 0.00,
+          "y": 99.75,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a1afc1a6be0c8360cf7f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":769.1666666666667,\"y\":2532.222222222222,\"z\":0,\"width\":450,\"height\":300,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.engine_capacity_cc (bins)\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Vehicles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc (bins)\"},\"Name\":\"vehicles.engine_capacity_cc (bins)\",\"NativeReferenceName\":\"engine_capacity_cc (bins)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Vehicles\"},\"Name\":\"_Measures.Vehicles\",\"NativeReferenceName\":\"Vehicles\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Vehicles\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter0ef16de55d2d8a127338\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"engine_capacity_cc\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc\"}},\"Right\":{\"Literal\":{\"Value\":\"-1L\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"Filterb6c3ebd5ccb09744371a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"engine_capacity_cc (bins)\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"engine_capacity_cc (bins)\"}},\"Right\":{\"Literal\":{\"Value\":\"5000L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"Filterefe8d6980d121b5b0074\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"vehicle_type\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"ordinal\":2},{\"name\":\"Filterb319e2730a94bbf34862\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Vehicles\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3}]",
+          "height": 300.00,
+          "width": 450.00,
+          "x": 769.17,
+          "y": 2532.22,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b80854d03deb7f5587d6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":101.35802469135797,\"z\":10000,\"width\":1280,\"height\":475.55555555555554,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.% Diff QTD Collisions LY\"}],\"Y2\":[{\"queryRef\":\"_Measures.Collisions\"}],\"Category\":[{\"queryRef\":\"_Dates.Year Quarter Hierarchy.Year Quarter\",\"active\":true},{\"queryRef\":\"_Dates.Year Quarter Hierarchy.Month\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"_1\",\"Entity\":\"_Dates\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"% Diff QTD Collisions LY\"},\"Name\":\"_Measures.% Diff QTD Collisions LY\",\"NativeReferenceName\":\"% Diff QTD Collisions LY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Hierarchy\":\"Year Quarter Hierarchy\"}},\"Level\":\"Year Quarter\"},\"Name\":\"_Dates.Year Quarter Hierarchy.Year Quarter\",\"NativeReferenceName\":\"Year Quarter Hierarchy Year Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Hierarchy\":\"Year Quarter Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"_Dates.Year Quarter Hierarchy.Month\",\"NativeReferenceName\":\"Year Quarter Hierarchy Month\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% Diff QTD Collisions LY\"}},\"FillRule\":{\"linearGradient3\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}},\"mid\":{\"color\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}},\"value\":{\"Literal\":{\"Value\":\"0D\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#FF9500'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"shadeArea\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'round'\"}}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualTooltip\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"135a93cdfeefc6059e6a\"}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% Diff YTD from Last Years Collisions\"}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false},{\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Dates\"}},\"Hierarchy\":\"Year Quarter Hierarchy\"}},\"Level\":\"Year Quarter\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"_1\",\"Entity\":\"_Dates\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Hierarchy\":\"Year Quarter Hierarchy\"}},\"Level\":\"Year Quarter\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 475.56,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 101.36,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"c329cfea61f407eb8ffb\",\"layouts\":[{\"id\":0,\"position\":{\"height\":634.4444444444445,\"width\":600,\"x\":0,\"y\":99.99999999999977,\"z\":11000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"collisions.police_force\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"police_force\"},\"Name\":\"collisions.police_force\",\"NativeReferenceName\":\"police_force\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"cc3ac877459756b2c825\"}",
+          "filters": "[]",
+          "height": 634.44,
+          "width": 600.00,
+          "x": 0.00,
+          "y": 100.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"cb163887dd97f4019874\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":100,\"z\":10000,\"width\":600,\"height\":634.2857142857143,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Tooltips\":[{\"queryRef\":\"_Measures.% of Total\"}],\"Y\":[{\"queryRef\":\"_Measures.Total Collision Count\"},{\"queryRef\":\"_Measures.Collisions\"}],\"Category\":[{\"queryRef\":\"vehicles.Model Groups\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Collisions\"},\"Name\":\"_Measures.Total Collision Count\",\"NativeReferenceName\":\"Total Collisions1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"% of Total\"},\"Name\":\"_Measures.% of Total\",\"NativeReferenceName\":\"% of Total1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Collisions\"}}}]},\"columnProperties\":{\"_Measures.% of Total\":{\"displayName\":\"% of Total\"},\"_Measures.Total Collision Count\":{\"displayName\":\"Total Collisions\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showSeries\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"_Measures.Total Collision Count\"}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}},{\"properties\":{\"dynamicLabelValue\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% of Total\"}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"_Measures.Collisions\",\"highlightMatching\":1}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#12239E'\"}}}}}},\"selector\":{\"metadata\":\"_Measures.Collisions\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"metadata\":\"_Measures.Total Collision Count\"}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Collisions'\"}}},\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}],\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"45698f8eb75929f60eb1\"}",
+          "filters": "[]",
+          "height": 634.29,
+          "width": 600.00,
+          "x": 0.00,
+          "y": 100.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"cc3ac877459756b2c825\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":1618.3333333333335,\"z\":1000,\"width\":600,\"height\":734.4444444444445,\"tabOrder\":8000}}],\"singleVisualGroup\":{\"displayName\":\"Group 5\",\"groupMode\":0}}",
+          "height": 734.44,
+          "width": 600.00,
+          "x": 0.00,
+          "y": 1618.33,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d4f36c50fb7db79af6df\",\"layouts\":[{\"id\":0,\"position\":{\"height\":100,\"width\":600.3116883116884,\"x\":0,\"y\":0,\"z\":10500,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}},{\"value\":\" by Police Response\",\"textStyle\":{\"fontSize\":\"28pt\"}}]},{\"textRuns\":[{\"value\":\"Click to filter proportional bar chart on the right\",\"textStyle\":{\"fontSize\":\"18.6667px\"}}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"cc3ac877459756b2c825\"}",
+          "filters": "[]",
+          "height": 100.00,
+          "width": 600.31,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 10500.00
+        },
+        {
+          "config": "{\"name\":\"df1179ff3f69bc76a132\",\"layouts\":[{\"id\":0,\"position\":{\"x\":769.1666666666667,\"y\":3244.0740740740744,\"z\":11000,\"width\":450,\"height\":300,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"collisions.weather_conditions\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_1\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"weather_conditions\"},\"Name\":\"collisions.weather_conditions\",\"NativeReferenceName\":\"weather_conditions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Collisions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 450.00,
+          "x": 769.17,
+          "y": 3244.07,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"ea2ae41f5ea13b2d2326\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":3926.6666666666665,\"z\":14000,\"width\":1280,\"height\":20,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 20.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 3926.67,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"f287a66394cb5e9a982f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":769.1666666666667,\"y\":3600.0000000000005,\"z\":12000,\"width\":450,\"height\":300,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"collisions.light_conditions\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_1\",\"Entity\":\"_Measures\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"light_conditions\"},\"Name\":\"collisions.light_conditions\",\"NativeReferenceName\":\"light_conditions\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Collisions\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 450.00,
+          "x": 769.17,
+          "y": 3600.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"f9c88843d8c9efe6a4d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":274.9382716049383,\"y\":1960.9876543209878,\"z\":10000,\"width\":298.88888888888886,\"height\":305.679012345679,\"tabOrder\":9000}}],\"singleVisualGroup\":{\"displayName\":\"Group 6\",\"groupMode\":0}}",
+          "height": 305.68,
+          "width": 298.89,
+          "x": 274.94,
+          "y": 1960.99,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"fb8665f9f5113c2282d5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.6172839506172699,\"y\":30.123456790123427,\"z\":6000,\"width\":297.77777777777777,\"height\":275.55555555555554,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Y\":[{\"queryRef\":\"collisions.Latitude Bin\"}],\"X\":[{\"queryRef\":\"collisions.Longitude Bin\"}],\"Size\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Latitude Bin\"},\"Name\":\"collisions.Latitude Bin\",\"NativeReferenceName\":\"Latitude Bin\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Longitude Bin\"},\"Name\":\"collisions.Longitude Bin\",\"NativeReferenceName\":\"Longitude Bin\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}},\"showLabels\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"mapControls\":[{\"properties\":{\"showLassoButton\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"f9c88843d8c9efe6a4d1\"}",
+          "filters": "[]",
+          "height": 275.56,
+          "width": 297.78,
+          "x": 0.62,
+          "y": 30.12,
+          "z": 6000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Average by Dimension and Nested Sorting",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection78a85b6348b3f5a6e4fb",
+      "ordinal": 8,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f55b085e4c056cf68111\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":952.8571428571429,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vehicles.Model Groups Hierarchy.Model Groups\",\"active\":true},{\"queryRef\":\"vehicles.Model Groups Hierarchy.generic_make_model\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Collisions\"}],\"Tooltips\":[{\"queryRef\":\"_Measures.Nested Sorting Model and Generic Model\"},{\"queryRef\":\"_Measures.Above Model Average\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Hierarchy\":\"Model Groups Hierarchy\"}},\"Level\":\"Model Groups\"},\"Name\":\"vehicles.Model Groups Hierarchy.Model Groups\",\"NativeReferenceName\":\"Model Groups Hierarchy Model Groups\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Hierarchy\":\"Model Groups Hierarchy\"}},\"Level\":\"generic_make_model\"},\"Name\":\"vehicles.Model Groups Hierarchy.generic_make_model\",\"NativeReferenceName\":\"Model Groups Hierarchy generic_make_model\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Nested Sorting Model and Generic Model\"},\"Name\":\"_Measures.Nested Sorting Model and Generic Model\",\"NativeReferenceName\":\"Nested Sorting Model and Generic Model\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Above Model Average\"},\"Name\":\"_Measures.Above Model Average\",\"NativeReferenceName\":\"Above Model Average\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Nested Sorting Model and Generic Model\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Above Model Average\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#DEEFFF'\"}}},{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Above Model Average\"}},\"Right\":{\"Literal\":{\"Value\":\"1D\"}}}},\"Value\":{\"Literal\":{\"Value\":\"'#12239E'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 952.86,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Running Total by Model Group",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection8e4adff53f316a1d8421",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6f2d1cbf0048ddd3ed55\",\"layouts\":[{\"id\":0,\"position\":{\"x\":580,\"y\":76.42857142857143,\"z\":1000,\"width\":700,\"height\":643.5714285714287,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Series\":[{\"queryRef\":\"vehicles.Model Groups\"}],\"Y\":[{\"queryRef\":\"Sum(collisions.Collision Count)\"}],\"Category\":[{\"queryRef\":\"_Dates.Year Quarter\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"_Measures.% of Total by Model Group\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Dates\",\"Type\":0},{\"Name\":\"_1\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0},\"Name\":\"Sum(collisions.Collision Count)\",\"NativeReferenceName\":\"Sum of Collision Count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Year Quarter\"},\"Name\":\"_Dates.Year Quarter\",\"NativeReferenceName\":\"Year Quarter\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"% of Total by Model Group\"},\"Name\":\"_Measures.% of Total by Model Group\",\"NativeReferenceName\":\"% of Total by Model Group\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Year Quarter\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"labelOverflow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}},{\"properties\":{\"dynamicLabelValue\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"% of Total by Model Group\"}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"highlightMatching\":1}}]}}}",
+          "filters": "[{\"expression\":{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"generic_make_model\"}}]}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Collision Count\"}},\"Function\":0}}}],\"Top\":8}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 643.57,
+          "width": 700.00,
+          "x": 580.00,
+          "y": 76.43,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f8c8334a73c0073bc9dd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":175,\"z\":0,\"width\":524.2857142857143,\"height\":545,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Series\":[{\"queryRef\":\"vehicles.Model Groups\"}],\"Category\":[{\"queryRef\":\"_Dates.Year Quarter\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Running Total of Collisions\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_1\",\"Entity\":\"_Dates\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"vehicles.Model Groups\",\"NativeReferenceName\":\"Model Groups\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Running Total of Collisions\"},\"Name\":\"_Measures.Running Total of Collisions\",\"NativeReferenceName\":\"Running Total of Collisions\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_1\"}},\"Property\":\"Year Quarter\"},\"Name\":\"_Dates.Year Quarter\",\"NativeReferenceName\":\"Year Quarter\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"vehicles\"}},\"Property\":\"generic_make_model\"}}]}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Collisions\"}}}],\"Top\":8}}},\"Type\":2},{\"Name\":\"v\",\"Entity\":\"vehicles\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"GroupRef\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Model Groups\",\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"generic_make_model\"}}]}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 545.00,
+          "width": 524.29,
+          "x": 0.00,
+          "y": 175.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Moving Window Averages",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionedd5b1780f270e1201c6",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1dc3fb390a2f012ae6cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":942.5,\"y\":110,\"z\":1000,\"width\":285.83333333333337,\"height\":111.66666666666667,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Moving Average N days.Moving Average N days\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"},\"Name\":\"Moving Average N days.Moving Average N days\",\"NativeReferenceName\":\"Moving Average N days\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"numericStart\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Right\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 111.67,
+          "width": 285.83,
+          "x": 942.50,
+          "y": 110.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"dedb38c45f0f6ebae060\",\"layouts\":[{\"id\":0,\"position\":{\"x\":155.71428571428572,\"y\":91.42857142857143,\"z\":2000,\"width\":405.7142857142857,\"height\":58.57142857142858,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Collisions by Day and Moving Average +/- \"},{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"Value\"}}},{\"value\":\" days\"}]}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Moving Average N days\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Moving Average N days\"}},\"Function\":1},\"Name\":\"Avg(Moving Average N days.Moving Average N days)\"}]}}},\"Property\":\"Avg(Moving Average N days.Moving Average N days)\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Value\",\"utterance\":\"max(moving average n days)\"}}}}},\"formatString\":{\"expr\":{\"Literal\":{\"Value\":\"'0'\"}}}},\"selector\":{\"id\":\"Value\"}}]}}}",
+          "filters": "[]",
+          "height": 58.57,
+          "width": 405.71,
+          "x": 155.71,
+          "y": 91.43,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"f9a364a3464464b0f3ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":264.2857142857143,\"z\":0,\"width\":1235.7142857142858,\"height\":455.7142857142857,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"_Measures.Collisions\"},{\"queryRef\":\"_Measures.3 Month Window Average\"}],\"Category\":[{\"queryRef\":\"collisions.date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"collisions\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"},\"Name\":\"collisions.date\",\"NativeReferenceName\":\"date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Window Average of Collisions\"},\"Name\":\"_Measures.3 Month Window Average\",\"NativeReferenceName\":\"Window Average of Collisions\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Collisions\"},\"Name\":\"_Measures.Collisions\",\"NativeReferenceName\":\"Collisions\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 455.71,
+          "width": 1235.71,
+          "x": 0.00,
+          "y": 264.29,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Custom47809618154145905.json"
+}
