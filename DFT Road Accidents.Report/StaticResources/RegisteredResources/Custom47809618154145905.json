@@ -1,0 +1,69 @@
+{
+  "name": "Custom",
+  "bad": "#F27500",
+  "neutral": "#B0B0B0",
+  "good": "#1F6CE8",
+  "minimum": "#F17400",
+  "center": "#FFFFFF",
+  "textClasses": {
+    "label": {
+      "fontFace": "Verdana",
+      "fontSize": 12,
+      "color": "#676664"
+    },
+    "callout": {
+      "fontFace": "Verdana",
+      "color": "#676664"
+    },
+    "title": {
+      "fontFace": "Verdana",
+      "fontSize": 18,
+      "color": "#676664"
+    },
+    "header": {
+      "fontFace": "Verdana",
+      "color": "#676664"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "transparency": 100
+          }
+        ],
+        "border": [
+          {
+            "show": false,
+            "radius": 4
+          }
+        ],
+        "visualHeader": [
+          {
+            "background": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    }
+  }
+}
