@@ -1,0 +1,65 @@
+table Highest
+	lineageTag: 892adaaa-8d24-4c0d-a7c3-b542bbd860f9
+
+	measure 'Sort by Measure' = SELECTEDVALUE('Highest'[Chosen Sort])
+		lineageTag: 17c36808-4a30-49ac-ad66-a177b1ff0291
+
+	column Parameter
+		dataType: string
+		lineageTag: 4b5b25c2-f6fe-4b26-b65a-0be2ca2792e1
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		dataType: string
+		isHidden
+		lineageTag: a59941a0-084d-4842-8553-c78253c97bcb
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 177945b0-7591-426c-bf66-99ab1dbcb8d5
+		summarizeBy: sum
+		isDataTypeInferred
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chosen Sort' = 'Highest'[Parameter]
+		dataType: string
+		lineageTag: 37708ac7-16c6-4cc6-80d7-d9a6309be9a3
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Highest = calculated
+		mode: import
+		source =
+				{
+				    ("% of Total", NAMEOF('_Measures'[% of Total]), 0),
+				    ("Total Collisions", NAMEOF('_Measures'[Total Collisions]), 1)
+				}
+
+	annotation PBI_Id = 8b1cd841840b404a8130c5f5007ece5c
+

@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["vehicles","collisions"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.126.1261.0 (24.02)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table vehicles
+ref table DateTableTemplate_1cfff568-1975-4e30-9d6d-92c2b89ef0f0
+ref table collisions
+ref table LocalDateTable_a9f148f5-4141-440a-84f2-394797ec7b73
+ref table _Measures
+ref table 'Moving Average N days'
+ref table 'Location Binning'
+ref table _Dates
+ref table Highest
+

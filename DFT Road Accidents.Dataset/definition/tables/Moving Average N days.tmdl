@@ -1,0 +1,28 @@
+table 'Moving Average N days'
+	lineageTag: 027ce582-4b18-4348-aa4a-f1af682c785a
+
+	measure 'Moving Average N days Value' = SELECTEDVALUE('Moving Average N days'[Moving Average N days], 15)
+		formatString: 0
+		lineageTag: 2de56255-b43b-4f8c-a761-50694f8954d7
+
+	column 'Moving Average N days'
+		dataType: int64
+		formatString: 0
+		lineageTag: 48b53854-87b2-4b8c-b39b-e9edc8d57eae
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Moving Average N days' = calculated
+		mode: import
+		source = GENERATESERIES(1, 90, 1)
+
+	annotation PBI_Id = 936f5868973b4ba598b07302031c357c
+

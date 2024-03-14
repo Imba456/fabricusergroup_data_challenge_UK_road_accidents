@@ -1,0 +1,204 @@
+table _Measures
+	lineageTag: f1e63f4d-92f3-47ba-8ec2-80b2fd1e3689
+
+	measure 'Window Average of Collisions' =
+			
+			AVERAGEX(
+			    WINDOW(
+			        -'Moving Average N days'[Moving Average N days Value] , REL
+			        ,'Moving Average N days'[Moving Average N days Value], REL
+			        ,SUMMARIZE(
+			            ALLSELECTED(collisions)
+			             ,collisions[date])
+			        ,ORDERBY(collisions[date], ASC)
+			    )
+			    ,[Collisions]
+			)
+		lineageTag: 0d8fdc38-4dcc-415d-8477-461d128c8425
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic Latitude Measure' = ```
+			
+			 IF([Latitude Measure]<0,
+			    MROUND(ABS([Latitude Measure]),[Location Binning Value])*-1
+			    ,MROUND([Latitude Measure],[Location Binning Value])
+			 )
+			```
+		lineageTag: 322bd075-964e-4a73-88ea-02277dcff94e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic Longitude Measure' = ```
+			
+			 IF([Longitude Measure]<0,
+			    MROUND(ABS([Longitude Measure]),[Location Binning Value])*-1
+			    ,MROUND([Longitude Measure],[Location Binning Value])
+			 )
+			```
+		lineageTag: 05f53d53-5f62-4856-9f17-0af2ce8e239e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Running Total of Collisions' = ```
+			
+			CALCULATE(
+				SUM(collisions[Collision Count])
+			        ,ALLEXCEPT(vehicles,vehicles[Model Groups])
+			        ,_Dates[Year Month]<=MAX(_Dates[Year Month])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: fa1a7da4-dbbf-421b-8f6c-6f2186d36952
+
+	measure '% of Total by Model Group' =
+			
+			DIVIDE(
+			    SUM(collisions[Collision Count])
+			    ,CALCULATE(
+			        SUM(collisions[Collision Count])
+			        ,ALL(vehicles[Model Groups])
+			    )
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 820a6421-ebcc-49c9-a2ef-02bc0784ba9a
+
+	measure 'Total YTD Collisions' = TOTALYTD(SUM(collisions[Collision Count]),_Dates[Date])
+		formatString: 0
+		lineageTag: bda73e3b-e239-4451-8a01-fce23aacf52b
+
+	measure 'Total YTD Collisions LY' = TOTALYTD(SUM(collisions[Collision Count]),SAMEPERIODLASTYEAR(_Dates[Date]))
+		formatString: 0
+		lineageTag: 73fd39eb-1313-48ec-9de1-df6baed396b2
+
+	measure '% Diff YTD from Last Years Collisions' = ```
+			
+			 DIVIDE([Total YTD Collisions],[Total YTD Collisions LY])-1
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: f6824e4c-a35d-4026-b1a5-7fd84c84a343
+
+	measure 'Total QTD Collisions' =
+			
+			TOTALQTD(SUM(collisions[Collision Count]),_Dates[Date])
+		formatString: 0
+		lineageTag: b71e2be4-9958-4f8d-a1c7-093d99369a80
+
+	measure 'Total QTD Collisions LY' =
+			
+			TOTALQTD(SUM(collisions[Collision Count]),SAMEPERIODLASTYEAR(_Dates[Date]))
+		formatString: 0
+		lineageTag: b33314fe-847c-4155-a383-fdf0f8b9a5f7
+
+	measure '% Diff QTD Collisions LY' = ```
+			
+			 IF(DIVIDE([Total QTD Collisions],[Total QTD Collisions LY])=0,1,DIVIDE([Total QTD Collisions],[Total QTD Collisions LY]))-1
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e69355cc-9d08-41c5-b4c5-cdaffac652fb
+
+	measure 'Total Collisions' =
+			
+			CALCULATE(
+			    SUM(collisions[Collision Count])
+			    ,ALLEXCEPT(vehicles,vehicles[Model Groups], vehicles[generic_make_model], vehicles[vehicle_type], _Dates[Date], _Dates[Month], _Dates[Year], _Dates[Quarter])
+			)
+		formatString: 0
+		lineageTag: 66cf18f6-7a46-4e74-84f2-6d4888f378ce
+
+	measure Collisions = SUM(collisions[Collision Count])
+		formatString: 0
+		lineageTag: e56a52ae-109c-4b8a-ae20-a353a035c612
+
+	measure '% of Total' =
+			
+			DIVIDE([Collisions]
+			,
+			[Total Collisions]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 5018fc4f-2669-4089-9921-91382ca8ed93
+
+	measure 'Sort Measure' =
+			
+			IF('Highest'[Sort by Measure]="% Total",[% of Total],[Total Collisions])
+		lineageTag: 1d2fb126-ad3d-473e-98d4-a3ff182b2df4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average by Model' =
+			
+			DIVIDE(
+			CALCULATE(
+			    [Collisions]
+			    ,REMOVEFILTERS(vehicles[generic_make_model])
+			)
+			,
+			CALCULATE(
+			DISTINCTCOUNT(vehicles[generic_make_model])
+			,REMOVEFILTERS(vehicles[generic_make_model])
+			))
+		lineageTag: d6badbe8-abf3-4c5e-af88-e3f7b3610ebc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'distinct count total' =
+			
+			CALCULATE(
+			DISTINCTCOUNT(vehicles[Model Groups])
+			,REMOVEFILTERS(vehicles[Model Groups])
+			)
+		formatString: 0
+		lineageTag: c6f123d8-b3b8-4ba4-b04f-84ef0c013b5c
+
+	measure total =
+			CALCULATE(
+			    [Collisions]
+			    ,ALLSELECTED(vehicles[Model Groups])
+			)
+		formatString: 0
+		lineageTag: 5bb2d0df-d928-47a4-9480-7989286a13ce
+
+	measure 'Above Model Average' =
+			
+			IF([Collisions]>[Average by Model],1,0)
+		formatString: 0
+		lineageTag: 98234e6e-221e-4324-adcb-cdf87cff95e6
+
+	measure 'Nested Sorting Model and Generic Model' =
+			
+			RANKX(ALL(vehicles[generic_make_model]), [Collisions],,DESC,Dense) //this is the sorting without model group
+			+
+			RANKX(ALL(vehicles[Model Groups]), CALCULATE([Collisions],REMOVEFILTERS(vehicles[generic_make_model])),,DESC)*100 //this is the sorting without sub-category, multiplied by 100
+		formatString: 0
+		lineageTag: d27e7eba-bf91-49b3-90db-517f98ab83d2
+
+	measure Vehicles = SUM(vehicles[Vehicle Count])
+		formatString: 0
+		lineageTag: 42ec17d0-fe4e-4c6c-8786-1cdb739791a5
+
+	measure 'Above Model Average Label' =
+			
+			IF([Collisions]>[Average by Model],[Collisions],BLANK())
+		formatString: 0
+		lineageTag: 40074355-c1e5-40da-bca1-7a06bda8b000
+
+	column Column
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 214b9d43-10ff-406f-bae3-78c378412a3c
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = c763452d6704417f9f2144567332cf6b
+

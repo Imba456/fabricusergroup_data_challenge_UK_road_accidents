@@ -1,0 +1,43 @@
+table 'Location Binning'
+	lineageTag: ff407f16-6377-4689-a5c5-04f55e9eb820
+
+	measure 'Location Binning Value' = SELECTEDVALUE('Location Binning'[Location Binning])
+		formatString: 0.00
+		lineageTag: 3e5c70a1-7695-40f6-896c-f9e62b715782
+		dataCategory: Uncategorized
+
+	measure 'Dynamic Location' =
+			
+			[Dynamic Latitude Measure]&[Dynamic Longitude Measure]
+		lineageTag: 0f1daa4a-cef4-4bb2-8dd8-1726489ef889
+
+	column 'Location Binning'
+		dataType: double
+		formatString: 0.00
+		lineageTag: b4080040-3974-4915-98c8-521a3bc80c3f
+		summarizeBy: none
+		isDataTypeInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	column 'Relation Location' = 1
+		dataType: int64
+		formatString: 0
+		lineageTag: a238fab1-b21e-4855-a4cf-788fe7fe23f7
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Location Binning' = calculated
+		mode: import
+		source = GENERATESERIES(0.01, 1, 0.01)
+
+	annotation PBI_Id = 260df4328cc74241998103de3a7db37c
+

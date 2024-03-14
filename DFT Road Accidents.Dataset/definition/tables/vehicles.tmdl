@@ -1,0 +1,1308 @@
+table vehicles
+	lineageTag: 23a1eb07-2204-4e11-84ed-15325fd3c8ee
+
+	column accident_index
+		dataType: string
+		lineageTag: ef4ec726-fb67-4adb-9034-b15255224fc8
+		summarizeBy: none
+		sourceColumn: accident_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column accident_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 12ae2413-24e3-4a7e-8349-934f9ee7d407
+		summarizeBy: sum
+		sourceColumn: accident_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column accident_reference
+		dataType: string
+		lineageTag: e7efb273-3a87-4f36-8672-c8fb200429a9
+		summarizeBy: none
+		sourceColumn: accident_reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_reference
+		dataType: int64
+		formatString: 0
+		lineageTag: 837d3a50-83fb-4773-b0a5-d07ff99a00ed
+		summarizeBy: sum
+		sourceColumn: vehicle_reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_of_driver
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d39860f-5306-472a-9aa7-3aee453e8709
+		summarizeBy: none
+		sourceColumn: age_of_driver
+
+		annotation SummarizationSetBy = User
+
+	column engine_capacity_cc
+		dataType: int64
+		formatString: 0
+		lineageTag: 03f700ca-e677-4078-b5ce-589e7d97a5f4
+		summarizeBy: none
+		sourceColumn: engine_capacity_cc
+
+		annotation SummarizationSetBy = User
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"vehicles","TableItemName":"engine_capacity_cc (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column age_of_vehicle
+		dataType: int64
+		formatString: 0
+		lineageTag: ba90bca0-bd94-4878-aeee-bc0fed2d7cb2
+		summarizeBy: none
+		sourceColumn: age_of_vehicle
+
+		annotation SummarizationSetBy = User
+
+	column generic_make_model
+		dataType: string
+		lineageTag: 6fcfbf8e-2588-47ff-98dd-2ceda529a126
+		summarizeBy: none
+		sourceColumn: generic_make_model
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"vehicles","TableItemName":"Model Groups","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column vehicle_manoeuvre
+		dataType: string
+		lineageTag: 3b084442-8683-4bbc-80e2-4b7327913c11
+		summarizeBy: none
+		sourceColumn: vehicle_manoeuvre
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_type
+		dataType: string
+		lineageTag: b5920138-3eb6-4ed3-8ffa-093db9aed5b2
+		summarizeBy: none
+		sourceColumn: vehicle_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column junction_location
+		dataType: string
+		lineageTag: 49c50d70-d5d3-4ef8-80ba-39a23cd0bba3
+		summarizeBy: none
+		sourceColumn: junction_location
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_direction_to
+		dataType: string
+		lineageTag: 622ca8d0-1099-44dc-9b69-306fbcb16662
+		summarizeBy: none
+		sourceColumn: vehicle_direction_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_leaving_carriageway
+		dataType: string
+		lineageTag: 3acfd3b1-ca2a-46f1-932c-03b8883097af
+		summarizeBy: none
+		sourceColumn: vehicle_leaving_carriageway
+
+		annotation SummarizationSetBy = Automatic
+
+	column towing_and_articulation
+		dataType: string
+		lineageTag: 1df6b37d-a44f-43f3-acf7-89d7cd0336ec
+		summarizeBy: none
+		sourceColumn: towing_and_articulation
+
+		annotation SummarizationSetBy = Automatic
+
+	column journey_purpose_of_driver
+		dataType: string
+		lineageTag: ca929f2e-bbe2-4944-957c-7ac4ee5a603f
+		summarizeBy: none
+		sourceColumn: journey_purpose_of_driver
+
+		annotation SummarizationSetBy = Automatic
+
+	column hit_object_off_carriageway
+		dataType: string
+		lineageTag: 4f3c8262-2ec1-4d93-94ea-fae924cb09cb
+		summarizeBy: none
+		sourceColumn: hit_object_off_carriageway
+
+		annotation SummarizationSetBy = Automatic
+
+	column propulsion_code
+		dataType: string
+		lineageTag: 7c366c7b-0976-45a7-9441-0b904304867b
+		summarizeBy: none
+		sourceColumn: propulsion_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_location_restricted_lane
+		dataType: string
+		lineageTag: 5dccff3e-b956-4c82-aa29-973b3affe9c1
+		summarizeBy: none
+		sourceColumn: vehicle_location_restricted_lane
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_home_area_type
+		dataType: string
+		lineageTag: 1085b930-c8d8-4d80-aeaa-6a7222a53ee0
+		summarizeBy: none
+		sourceColumn: driver_home_area_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column skidding_and_overturning
+		dataType: string
+		lineageTag: 4ff9922a-5c3d-4077-bc81-17b82f97a9f5
+		summarizeBy: none
+		sourceColumn: skidding_and_overturning
+
+		annotation SummarizationSetBy = Automatic
+
+	column hit_object_in_carriageway
+		dataType: string
+		lineageTag: af99d822-3c06-4d89-89e7-799cbe5d300b
+		summarizeBy: none
+		sourceColumn: hit_object_in_carriageway
+
+		annotation SummarizationSetBy = Automatic
+
+	column driver_imd_decile
+		dataType: string
+		lineageTag: 52bdbc7f-f6c1-4dda-8833-1902e4cccb9b
+		summarizeBy: none
+		sourceColumn: driver_imd_decile
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_point_of_impact
+		dataType: string
+		lineageTag: 82ab3575-ab59-4211-aa2d-314cf624d2e4
+		summarizeBy: none
+		sourceColumn: first_point_of_impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_left_hand_drive
+		dataType: string
+		lineageTag: f0ab420b-4b19-4286-9967-61f975435e7e
+		summarizeBy: none
+		sourceColumn: vehicle_left_hand_drive
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band_of_driver
+		dataType: string
+		lineageTag: 15719766-7ee3-4e62-81ea-65ea4dd6f40a
+		summarizeBy: none
+		sourceColumn: age_band_of_driver
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_direction_from
+		dataType: string
+		lineageTag: 1570e360-2900-4b18-aee5-3533b01b4ea6
+		summarizeBy: none
+		sourceColumn: vehicle_direction_from
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vehicle Count' = 1
+		dataType: int64
+		formatString: 0
+		lineageTag: dced1965-abe1-425a-9e46-a2c6a8bd4739
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'engine_capacity_cc (bins)' =
+			IF(
+				ISBLANK('vehicles'[engine_capacity_cc]),
+				BLANK(),
+				INT('vehicles'[engine_capacity_cc] / 500) * 500
+			)
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ddc0ee4-e2bb-4d0a-8fbc-5c2720492a87
+		summarizeBy: none
+		isDataTypeInferred
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "vehicles"
+				          }
+				        },
+				        "Property": "engine_capacity_cc"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 500.0,
+				      "unit": 0
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"vehicles"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"engine_capacity_cc"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"engine_capacity_cc"}},"Size":500.0}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Model Groups' =
+			SWITCH(
+				TRUE,
+				ISBLANK('vehicles'[generic_make_model]),
+				"(Blank)",
+				'vehicles'[generic_make_model] IN {"ABARTH 500",
+					"ABARTH 595"},
+				"ABARATH",
+				'vehicles'[generic_make_model] IN {"AJS DD 125",
+					"AJS MODENA 125"},
+				"AJS",
+				'vehicles'[generic_make_model] IN {"ALFA ROMEO 147",
+					"ALFA ROMEO 156",
+					"ALFA ROMEO 159",
+					"ALFA ROMEO GIULIA",
+					"ALFA ROMEO GIULIETTA",
+					"ALFA ROMEO GT",
+					"ALFA ROMEO MITO",
+					"ALFA ROMEO STELVIO"},
+				"ALFA ROMEO",
+				'vehicles'[generic_make_model] IN {"Aprilia DORSODURO",
+					"APRILIA MODEL MISSING",
+					"APRILIA RS 125",
+					"Aprilia RS4",
+					"APRILIA RS50",
+					"APRILIA SR 50",
+					"APRILIA SR MOTARD 125",
+					"APRILIA SX 125",
+					"APRILIA TUONO"},
+				"APRILIA",
+				'vehicles'[generic_make_model] IN {"AUDI A1",
+					"AUDI A2",
+					"AUDI A3",
+					"AUDI A4",
+					"AUDI A5",
+					"AUDI A6",
+					"AUDI A7",
+					"AUDI A8",
+					"AUDI E-TRON",
+					"AUDI Model Missing",
+					"AUDI Q2",
+					"AUDI Q3",
+					"AUDI Q4",
+					"AUDI Q5",
+					"AUDI Q7",
+					"AUDI Q8",
+					"AUDI R8",
+					"AUDI RIO",
+					"AUDI RS3",
+					"AUDI RS4",
+					"AUDI RS5",
+					"AUDI RS6",
+					"AUDI RSQ3",
+					"AUDI S1",
+					"AUDI S3",
+					"AUDI S4",
+					"AUDI S5",
+					"AUDI SQ5",
+					"AUDI SQ7",
+					"AUDI TT",
+					"AUDI TTS"},
+				"AUDI",
+				'vehicles'[generic_make_model] IN {"BENELLI BN",
+					"BENELLI TORNADO"},
+				"BENELLI",
+				'vehicles'[generic_make_model] IN {"BMW 1 SERIES",
+					"BMW 2 SERIES",
+					"BMW 3 SERIES",
+					"BMW 4 SERIES",
+					"BMW 5 SERIES",
+					"BMW 6 SERIES",
+					"BMW 7 SERIES",
+					"BMW 8 SERIES",
+					"BMW F 650 GS",
+					"BMW F 750",
+					"BMW F 800",
+					"BMW G 310",
+					"BMW I3",
+					"BMW I4",
+					"BMW I8",
+					"BMW IX3",
+					"BMW K SERIES",
+					"BMW K1300 S",
+					"BMW M1",
+					"BMW M2",
+					"BMW M3",
+					"BMW M4",
+					"BMW M5",
+					"BMW MODEL MISSING",
+					"BMW R 1150 GS",
+					"BMW R 1200",
+					"BMW R 1250",
+					"BMW R NINE T",
+					"BMW R SERIES",
+					"BMW S 1000",
+					"BMW X1",
+					"BMW X2",
+					"BMW X3",
+					"BMW X4",
+					"BMW X5",
+					"BMW X6",
+					"BMW Z3",
+					"BMW Z4"},
+				"BMW",
+				'vehicles'[generic_make_model] IN {"CHEVROLET AVEO",
+					"CHEVROLET CAPTIVA",
+					"CHEVROLET CRUZE",
+					"CHEVROLET KALOS",
+					"CHEVROLET LACETTI",
+					"CHEVROLET MATIZ",
+					"CHEVROLET ORLANDO",
+					"CHEVROLET SPARK",
+					"CHEVROLET TACUMA"},
+				"CHEVROLET",
+				'vehicles'[generic_make_model] IN {"CHRYSLER 300",
+					"CHRYSLER 300C",
+					"CHRYSLER GRAND VOYAGER",
+					"CHRYSLER PT CRUISER",
+					"CHRYSLER VOYAGER",
+					"CHRYSLER YPSILON"},
+				"CHRYSLER",
+				'vehicles'[generic_make_model] IN {"CITROEN BERLINGO",
+					"CITROEN C1",
+					"CITROEN C2",
+					"CITROEN C3",
+					"CITROEN C4",
+					"CITROEN C5",
+					"CITROEN C8",
+					"CITROEN C-CROSSER",
+					"CITROEN DISPATCH",
+					"CITROEN DS3",
+					"CITROEN DS4",
+					"CITROEN DS5",
+					"CITROEN NEMO",
+					"CITROEN RELAY",
+					"CITROEN SAXO",
+					"CITROEN XSARA"},
+				"CITROEN",
+				'vehicles'[generic_make_model] IN {"DACIA DUSTER",
+					"DACIA LOGAN",
+					"DACIA SANDERO"},
+				"DACIA",
+				'vehicles'[generic_make_model] IN {"DAEWOO KALOS",
+					"DAEWOO MATIZ"},
+				"DAEWOO",
+				'vehicles'[generic_make_model] IN {"DAF MODEL MISSING",
+					"DAF TRUCKS FA 45LF",
+					"DAF TRUCKS FA 55LF",
+					"DAF TRUCKS FAD 85CF",
+					"DAF TRUCKS Model Missing"},
+				"DAF",
+				'vehicles'[generic_make_model] IN {"DAIHATSU CHARADE",
+					"DAIHATSU SIRION",
+					"DAIHATSU TERIOS"},
+				"DAIHATSU",
+				'vehicles'[generic_make_model] IN {"DODGE CALIBER",
+					"DODGE NITRO"},
+				"DODGE",
+				'vehicles'[generic_make_model] IN {"DUCATI 899 PANIGALE",
+					"DUCATI HYPERMOTARD",
+					"DUCATI M696",
+					"DUCATI MULTISTRADA",
+					"Ducati MULTISTRADA 1200",
+					"DUCATI PANIGALE",
+					"DUCATI SCRAMBLER"},
+				"DUCATI",
+				'vehicles'[generic_make_model] IN {"FIAT 500",
+					"FIAT 500L",
+					"FIAT 500X",
+					"FIAT BRAVO",
+					"FIAT DOBLO",
+					"FIAT DUCATO",
+					"FIAT FIORINO",
+					"FIAT Model Missing",
+					"FIAT MULTIPLA",
+					"FIAT PANDA",
+					"FIAT PUNTO",
+					"FIAT QUBO",
+					"FIAT SCUDO",
+					"FIAT SEICENTO",
+					"FIAT STILO",
+					"FIAT TALENTO",
+					"FIAT TIPO"},
+				"FIAT",
+				'vehicles'[generic_make_model] IN {"FORD B-MAX",
+					"FORD C-MAX",
+					"FORD ECOSPORT",
+					"FORD EDGE",
+					"FORD ESCORT",
+					"FORD FIESTA",
+					"FORD FOCUS",
+					"FORD FUSION",
+					"FORD GALAXY",
+					"FORD GRAND C-MAX",
+					"FORD KA",
+					"FORD KA+",
+					"FORD KUGA",
+					"FORD MAVERICK",
+					"FORD Model Missing",
+					"FORD MONDEO",
+					"FORD MUSTANG",
+					"FORD MUSTANG MACH-E",
+					"FORD PUMA",
+					"FORD RANGER",
+					"FORD S-MAX",
+					"FORD STREETKA",
+					"FORD TOURNEO",
+					"FORD TRANSIT",
+					"FORD TRANSIT CONNECT",
+					"FORD TRANSIT COURIER",
+					"FORD TRANSIT CUSTOM"},
+				"FORD",
+				'vehicles'[generic_make_model] IN {"HARLEY-DAVIDSON FLHR",
+					"HARLEY-DAVIDSON FLS",
+					"HARLEY-DAVIDSON FXD",
+					"HARLEY-DAVIDSON FXDB",
+					"HARLEY-DAVIDSON Model Missing",
+					"HARLEY-DAVIDSON STREET",
+					"Harley-Davidson VRSC",
+					"HARLEY-DAVIDSON XL",
+					"HARLEY-DAVIDSON XL 1200",
+					"HARLEY-DAVIDSON XL 883"},
+				"HARLEY",
+				'vehicles'[generic_make_model] IN {"HONDA ACCORD",
+					"HONDA AFS1102SH",
+					"HONDA ANC",
+					"HONDA ANC125",
+					"HONDA ANC125E",
+					"Honda ANF125",
+					"HONDA C90",
+					"HONDA CB",
+					"HONDA CB 650 FA",
+					"HONDA CB1000",
+					"HONDA CB500",
+					"HONDA CB500F",
+					"HONDA CB500FA",
+					"HONDA CB500XA",
+					"HONDA CB600 HORNET",
+					"HONDA CB600F",
+					"HONDA CB650",
+					"HONDA CB650FA",
+					"HONDA CBF",
+					"HONDA CBF 125",
+					"HONDA CBF1000A",
+					"Honda CBF125M",
+					"HONDA CBF125N",
+					"HONDA CBF500",
+					"HONDA CBF600N",
+					"HONDA CBF600SA",
+					"HONDA CBR",
+					"HONDA CBR 650 FA",
+					"HONDA CBR1000RR",
+					"HONDA CBR1100X",
+					"HONDA CBR1100XX",
+					"HONDA CBR125R",
+					"Honda CBR250",
+					"HONDA CBR500",
+					"HONDA CBR500RA",
+					"HONDA CBR600",
+					"HONDA CBR600F",
+					"HONDA CBR600RA",
+					"Honda CBR600RR",
+					"Honda CBR900RR",
+					"HONDA CG",
+					"HONDA CG125",
+					"HONDA CIVIC",
+					"HONDA CMX 500",
+					"HONDA CMX500",
+					"HONDA CRF 1100",
+					"HONDA CRF1000A",
+					"HONDA CRF1000D",
+					"HONDA CRF250L",
+					"HONDA CRV",
+					"HONDA CR-V",
+					"HONDA CR-Z",
+					"HONDA FES125",
+					"HONDA FR-V",
+					"HONDA FSH125",
+					"HONDA GLR 125",
+					"HONDA HR-V",
+					"HONDA INSIGHT",
+					"HONDA JAZZ",
+					"HONDA Model Missing",
+					"HONDA MSX125",
+					"HONDA NC 750",
+					"HONDA NC 750 SA",
+					"HONDA NC 750 XA",
+					"HONDA NC700X",
+					"HONDA NC750",
+					"HONDA NC750XA",
+					"HONDA NC750XD",
+					"HONDA NHX110WH",
+					"HONDA NSC",
+					"HONDA NSC 110",
+					"HONDA NSC110E",
+					"HONDA NSC110MP",
+					"Honda NSC110WH",
+					"HONDA NSC50E",
+					"HONDA NSC50WH",
+					"HONDA NSS",
+					"HONDA NSS 125 AD",
+					"HONDA NSS300A",
+					"HONDA NT650V DEAUVILLE",
+					"HONDA NT700V",
+					"HONDA PES 125",
+					"HONDA S2000",
+					"HONDA SCV100F",
+					"HONDA SES125",
+					"HONDA SH",
+					"HONDA SH 125",
+					"HONDA SH 125 AD",
+					"HONDA SH 300",
+					"HONDA SH125",
+					"HONDA SH300A",
+					"HONDA SH350",
+					"HONDA ST",
+					"HONDA ST1300A",
+					"HONDA STREAM",
+					"HONDA VFR 1200",
+					"HONDA VFR 800",
+					"HONDA VFR800",
+					"HONDA VFR800A",
+					"HONDA VFR800F",
+					"HONDA VT125C",
+					"HONDA VT750C",
+					"HONDA VTR1000F",
+					"HONDA WW125",
+					"HONDA WW125EX2",
+					"HONDA XL1000V",
+					"HONDA XL125V",
+					"HONDA XR125L"},
+				"HONDA",
+				'vehicles'[generic_make_model] IN {"HYUNDAI ACCENT",
+					"HYUNDAI AMICA",
+					"HYUNDAI BAYON",
+					"HYUNDAI COUPE",
+					"HYUNDAI GETZ",
+					"HYUNDAI I10",
+					"HYUNDAI I20",
+					"HYUNDAI I30",
+					"HYUNDAI I40",
+					"HYUNDAI I800",
+					"HYUNDAI IONIQ",
+					"HYUNDAI IX20",
+					"HYUNDAI IX35",
+					"HYUNDAI KONA",
+					"HYUNDAI MATRIX",
+					"HYUNDAI SANTA FE",
+					"HYUNDAI TRAJET",
+					"HYUNDAI TUCSON",
+					"HYUNDAI VELOSTER"},
+				"HYUNDAI",
+				'vehicles'[generic_make_model] IN {"JAGUAR E-PACE",
+					"JAGUAR F TYPE",
+					"JAGUAR F-PACE",
+					"JAGUAR F-TYPE",
+					"JAGUAR I-PACE",
+					"JAGUAR S TYPE",
+					"JAGUAR X TYPE",
+					"JAGUAR XE SERIES",
+					"JAGUAR XF SERIES",
+					"JAGUAR XJ SERIES",
+					"JAGUAR XK SERIES"},
+				"JAGUAR",
+				'vehicles'[generic_make_model] IN {"JEEP CHEROKEE",
+					"JEEP COMPASS",
+					"JEEP GRAND CHEROKEE",
+					"JEEP PATRIOT",
+					"JEEP RENEGADE",
+					"JEEP WRANGLER"},
+				"JEEP",
+				'vehicles'[generic_make_model] IN {"JOHN DEERE 6000 SERIES",
+					"JOHN DEERE 6100 SERIES",
+					"JOHN DEERE 6200 SERIES",
+					"JOHN DEERE 6R SERIES",
+					"JOHN DEERE MODEL MISSING"},
+				"JOHN DEERE",
+				'vehicles'[generic_make_model] IN {"KAWASAKI BR125",
+					"KAWASAKI BX 125",
+					"KAWASAKI BX125",
+					"KAWASAKI EN650",
+					"KAWASAKI ER",
+					"KAWASAKI ER500",
+					"KAWASAKI ER650",
+					"KAWASAKI EX",
+					"KAWASAKI EX 300",
+					"KAWASAKI EX 650",
+					"KAWASAKI EX250",
+					"KAWASAKI EX500",
+					"KAWASAKI EX650",
+					"KAWASAKI KLE",
+					"KAWASAKI KLE650",
+					"KAWASAKI KLX125",
+					"KAWASAKI KLZ1000",
+					"KAWASAKI Model Missing",
+					"KAWASAKI SC",
+					"KAWASAKI VN",
+					"KAWASAKI ZG1400",
+					"KAWASAKI ZR",
+					"KAWASAKI ZR1000",
+					"KAWASAKI ZR1200",
+					"KAWASAKI ZR750",
+					"KAWASAKI ZR800",
+					"KAWASAKI ZR900",
+					"KAWASAKI ZX",
+					"KAWASAKI ZX1000",
+					"KAWASAKI ZX1002",
+					"KAWASAKI ZX1200",
+					"KAWASAKI ZX1400",
+					"KAWASAKI ZX600",
+					"KAWASAKI ZX636",
+					"KAWASAKI ZX900"},
+				"KAWASAKI",
+				'vehicles'[generic_make_model] IN {"KIA CARENS",
+					"KIA CEED",
+					"KIA CERATO",
+					"KIA EV6",
+					"KIA NIRO",
+					"KIA OPTIMA",
+					"KIA PICANTO",
+					"KIA PRO CEED",
+					"KIA RIO",
+					"KIA SEDONA",
+					"KIA SORENTO",
+					"KIA SOUL",
+					"KIA SPORTAGE",
+					"KIA STONIC",
+					"KIA VENGA",
+					"KIA XCEED"},
+				"KIA",
+				'vehicles'[generic_make_model] IN {"LAND ROVER 90",
+					"LAND ROVER DEFENDER",
+					"LAND ROVER DISCOVERY",
+					"LAND ROVER FREELANDER",
+					"LAND ROVER Model Missing",
+					"LAND ROVER RANGE ROVER",
+					"LAND ROVER RANGE ROVER EVOQUE",
+					"LAND ROVER RANGE ROVER SPORT",
+					"LAND ROVER RANGE ROVER VELAR"},
+				"LAND ROVER",
+				'vehicles'[generic_make_model] IN {"LEXMOTO ASPIRE 125",
+					"LEXMOTO ASSAULT 125",
+					"LEXMOTO AURA",
+					"LEXMOTO CL",
+					"LEXMOTO DIABLO",
+					"LEXMOTO DIABLO 125",
+					"LEXMOTO ECHO",
+					"LEXMOTO ECHO 50",
+					"LEXMOTO ENIGMA",
+					"LEXMOTO FMR 125",
+					"LEXMOTO FMS 125",
+					"LEXMOTO FMX 125",
+					"Lexmoto GLADIATOR",
+					"LEXMOTO HUNTER",
+					"LEXMOTO ISCA 125",
+					"LEXMOTO LXR",
+					"LEXMOTO LXS",
+					"LEXMOTO MATADOR",
+					"LEXMOTO MICHIGAN",
+					"LEXMOTO MILANO",
+					"LEXMOTO MONZA 125",
+					"LEXMOTO TITAN",
+					"LEXMOTO TITAN 125",
+					"LEXMOTO VENOM 125",
+					"LEXMOTO VIPER 125",
+					"LEXMOTO XFLM 125",
+					"Lexmoto XTR 125",
+					"LEXMOTO ZSA 125",
+					"LEXMOTO ZSB",
+					"LEXMOTO ZSB 125",
+					"LEXMOTO ZSF",
+					"LEXMOTO ZSF 125",
+					"LEXMOTO ZSX",
+					"LEXMOTO ZSX 125"},
+				"LEXMOTO",
+				'vehicles'[generic_make_model] IN {"LEXUS CT 200",
+					"LEXUS ES 300",
+					"LEXUS GS 300",
+					"LEXUS GS 450",
+					"LEXUS GS300",
+					"LEXUS IS 200",
+					"LEXUS IS 220",
+					"LEXUS IS 250",
+					"LEXUS IS 300",
+					"LEXUS IS200",
+					"LEXUS IS220",
+					"LEXUS IS250",
+					"LEXUS IS300",
+					"LEXUS NX 300",
+					"LEXUS NX300",
+					"LEXUS RX 300",
+					"LEXUS RX 400",
+					"LEXUS RX 450",
+					"LEXUS RX300",
+					"LEXUS RX400",
+					"LEXUS RX450",
+					"LEXUS UX 250",
+					"LEXUS UX 250H"},
+				"LEXUS",
+				'vehicles'[generic_make_model] IN {"MAZDA 2",
+					"MAZDA 3",
+					"MAZDA 323",
+					"MAZDA 5",
+					"MAZDA 6",
+					"MAZDA CX3",
+					"MAZDA CX-3",
+					"MAZDA CX-30",
+					"MAZDA CX5",
+					"MAZDA CX-5",
+					"MAZDA CX7",
+					"MAZDA MODEL MISSING",
+					"MAZDA MX-5",
+					"MAZDA RX8",
+					"MAZDA RX-8"},
+				"MAZDA",
+				'vehicles'[generic_make_model] IN {"MERCEDES 190",
+					"MERCEDES 200",
+					"MERCEDES A CLASS",
+					"MERCEDES AMG CLASS",
+					"MERCEDES B CLASS",
+					"MERCEDES C CLASS",
+					"MERCEDES CITAN",
+					"MERCEDES CL CLASS",
+					"MERCEDES CLA CLASS",
+					"MERCEDES CLC CLASS",
+					"MERCEDES CLK CLASS",
+					"MERCEDES CLS CLASS",
+					"MERCEDES E CLASS",
+					"MERCEDES EQA CLASS",
+					"MERCEDES EQC CLASS",
+					"MERCEDES G CLASS",
+					"MERCEDES GL CLASS",
+					"MERCEDES GLA CLASS",
+					"MERCEDES GLB CLASS",
+					"MERCEDES GLC CLASS",
+					"MERCEDES GLE CLASS",
+					"MERCEDES GLS CLASS",
+					"MERCEDES ML CLASS",
+					"MERCEDES MODEL MISSING",
+					"MERCEDES R CLASS",
+					"MERCEDES S CLASS",
+					"MERCEDES SL CLASS",
+					"MERCEDES SLC CLASS",
+					"MERCEDES SLK CLASS",
+					"MERCEDES SPRINTER",
+					"MERCEDES TOURISMO",
+					"MERCEDES V CLASS",
+					"MERCEDES VIANO",
+					"MERCEDES VITO"},
+				"MERCEDES",
+				'vehicles'[generic_make_model] IN {"MG 3",
+					"MG 5",
+					"MG 6",
+					"MG GS",
+					"MG HS",
+					"MG MGF",
+					"MG TF",
+					"MG XS",
+					"MG ZR",
+					"MG ZS",
+					"MG ZT"},
+				"MG",
+				'vehicles'[generic_make_model] IN {"MINI CLUBMAN",
+					"MINI COOPER",
+					"MINI COUNTRYMAN",
+					"MINI FIRST",
+					"MINI JOHN COOPER WORKS",
+					"MINI Model Missing",
+					"MINI ONE",
+					"MINI PACEMAN",
+					"MINI ROADSTER"},
+				"MINI",
+				'vehicles'[generic_make_model] IN {"MITSUBISHI ASX",
+					"MITSUBISHI CARISMA",
+					"MITSUBISHI COLT",
+					"MITSUBISHI ECLIPSE",
+					"MITSUBISHI FUSO CANTER",
+					"MITSUBISHI GRANDIS",
+					"MITSUBISHI L200",
+					"MITSUBISHI LANCER",
+					"MITSUBISHI MIRAGE",
+					"MITSUBISHI Model Missing",
+					"MITSUBISHI OUTLANDER",
+					"MITSUBISHI SHOGUN",
+					"MITSUBISHI SPACE STAR"},
+				"MITSUBISHI",
+				'vehicles'[generic_make_model] IN {"NISSAN 350",
+					"NISSAN ALMERA",
+					"NISSAN CABSTAR",
+					"NISSAN E-NV200",
+					"NISSAN JUKE",
+					"NISSAN LEAF",
+					"NISSAN MICRA",
+					"NISSAN Model Missing",
+					"NISSAN NAVARA",
+					"NISSAN NOTE",
+					"NISSAN NT400",
+					"NISSAN NV200",
+					"NISSAN NV300",
+					"NISSAN NV400",
+					"NISSAN PATHFINDER",
+					"NISSAN PIXO",
+					"NISSAN PRIMASTAR",
+					"NISSAN PRIMERA",
+					"NISSAN PULSAR",
+					"NISSAN QASHQAI",
+					"NISSAN TERRANO",
+					"NISSAN X-TRAIL"},
+				"NISSAN",
+				'vehicles'[generic_make_model] IN {"PEUGEOT 1007",
+					"PEUGEOT 106",
+					"PEUGEOT 107",
+					"PEUGEOT 108",
+					"PEUGEOT 2008",
+					"PEUGEOT 205",
+					"PEUGEOT 206",
+					"PEUGEOT 207",
+					"PEUGEOT 208",
+					"PEUGEOT 3008",
+					"PEUGEOT 306",
+					"PEUGEOT 307",
+					"PEUGEOT 308",
+					"PEUGEOT 406",
+					"PEUGEOT 407",
+					"PEUGEOT 5008",
+					"PEUGEOT 508",
+					"PEUGEOT 807",
+					"PEUGEOT BIPPER",
+					"PEUGEOT BOXER",
+					"PEUGEOT E7",
+					"PEUGEOT EXPERT",
+					"PEUGEOT HORIZON",
+					"Peugeot KISBEE",
+					"Peugeot LUDIX",
+					"PEUGEOT Model Missing",
+					"PEUGEOT PARTNER",
+					"PEUGEOT PREMIER",
+					"PEUGEOT RCZ",
+					"PEUGEOT RIFTER",
+					"PEUGEOT SPEEDFIGHT",
+					"PEUGEOT TWEET",
+					"PEUGEOT TWEET 125",
+					"PEUGEOT TWEET 50",
+					"Peugeot V CLIC"},
+				"PEUGEOT",
+				'vehicles'[generic_make_model] IN {"PIAGGIO ET2",
+					"PIAGGIO FLY",
+					"PIAGGIO LIBERTY",
+					"PIAGGIO LX 125",
+					"PIAGGIO MEDLEY",
+					"PIAGGIO MEDLEY 125",
+					"PIAGGIO MP3",
+					"PIAGGIO NRG",
+					"PIAGGIO PX125",
+					"Piaggio TYPHOON",
+					"PIAGGIO VESPA",
+					"PIAGGIO X8",
+					"PIAGGIO XEVO",
+					"PIAGGIO ZIP"},
+				"PIAGIO",
+				'vehicles'[generic_make_model] IN {"PORSCHE 718",
+					"PORSCHE 911",
+					"PORSCHE BOXSTER",
+					"PORSCHE CAYENNE",
+					"PORSCHE CAYMAN",
+					"PORSCHE MACAN",
+					"PORSCHE PANAMERA",
+					"PORSCHE TAYCAN"},
+				"PORSCHE",
+				'vehicles'[generic_make_model] IN {"RENAULT ARKANA",
+					"RENAULT CAPTUR",
+					"RENAULT CLIO",
+					"RENAULT ESPACE",
+					"RENAULT GRAND SCENIC",
+					"RENAULT KADJAR",
+					"RENAULT KANGOO",
+					"RENAULT KOLEOS",
+					"RENAULT LAGUNA",
+					"RENAULT MASTER",
+					"RENAULT MEGANE",
+					"RENAULT Model Missing",
+					"RENAULT MODUS",
+					"RENAULT SCENIC",
+					"RENAULT TRAFIC",
+					"RENAULT TRUCKS MASTER",
+					"RENAULT TRUCKS MODEL MISSING",
+					"RENAULT TWINGO",
+					"RENAULT ZOE"},
+				"RENAULT",
+				'vehicles'[generic_make_model] IN {"ROVER 200 SERIES",
+					"ROVER 25",
+					"ROVER 400 SERIES",
+					"ROVER 45",
+					"ROVER 75",
+					"ROVER MINI"},
+				"ROVER",
+				'vehicles'[generic_make_model] IN {"SEAT ALHAMBRA",
+					"SEAT ALTEA",
+					"SEAT ARONA",
+					"SEAT AROSA",
+					"SEAT ATECA",
+					"SEAT EXEO",
+					"SEAT IBIZA",
+					"SEAT LEON",
+					"SEAT MII",
+					"SEAT TARRACO",
+					"SEAT TOLEDO"},
+				"SEAT",
+				'vehicles'[generic_make_model] IN {"SKODA CITIGO",
+					"SKODA ENYAQ",
+					"SKODA FABIA",
+					"SKODA FELICIA",
+					"SKODA KAMIQ",
+					"SKODA KAROQ",
+					"SKODA KODIAQ",
+					"SKODA OCTAVIA",
+					"SKODA RAPID",
+					"SKODA ROOMSTER",
+					"SKODA SCALA",
+					"SKODA SUPERB",
+					"SKODA YETI"},
+				"SKODA",
+				'vehicles'[generic_make_model] IN {"SMART CITY",
+					"SMART FORFOUR",
+					"SMART FORTWO",
+					"SMART ROADSTER"},
+				"SMART",
+				'vehicles'[generic_make_model] IN {"SUBARU FORESTER",
+					"SUBARU IMPREZA",
+					"SUBARU LEGACY",
+					"SUBARU OUTBACK",
+					"SUBARU XV"},
+				"SUBARU",
+				'vehicles'[generic_make_model] IN {"SUZUKI ALTO",
+					"SUZUKI AN 400",
+					"SUZUKI BALENO",
+					"SUZUKI CARRY",
+					"SUZUKI CELERIO",
+					"SUZUKI DL 1000",
+					"SUZUKI DL 650",
+					"SUZUKI DR 125",
+					"SUZUKI DR Z400",
+					"SUZUKI GRAND VITARA",
+					"SUZUKI GS 500",
+					"SUZUKI GSF 1200",
+					"SUZUKI GSF 1250",
+					"SUZUKI GSF 600",
+					"SUZUKI GSF 650",
+					"SUZUKI GSR 600",
+					"SUZUKI GSR 750",
+					"SUZUKI GSX 1250",
+					"SUZUKI GSX 1300",
+					"SUZUKI GSX 1400",
+					"SUZUKI GSX 650",
+					"SUZUKI GSX 750",
+					"SUZUKI GSXR",
+					"SUZUKI GSXR 1000",
+					"SUZUKI GSXR 1100",
+					"SUZUKI GSXR 600",
+					"SUZUKI GSXR 750",
+					"SUZUKI GSXS",
+					"SUZUKI GSXS 1000",
+					"SUZUKI GSXS 1100",
+					"SUZUKI GSXS 750",
+					"SUZUKI GZ 125",
+					"SUZUKI IGNIS",
+					"SUZUKI JIMNY",
+					"SUZUKI LIANA",
+					"SUZUKI Model Missing",
+					"SUZUKI RV 125",
+					"SUZUKI SFV 650",
+					"SUZUKI SPLASH",
+					"SUZUKI SV 1000",
+					"SUZUKI SV 650",
+					"SUZUKI SWIFT",
+					"SUZUKI SX4",
+					"SUZUKI TL 1000",
+					"Suzuki UH 125",
+					"SUZUKI UK 110",
+					"SUZUKI VITARA",
+					"SUZUKI WAGON R+"},
+				"SUZUKI",
+				'vehicles'[generic_make_model] IN {"TESLA MODEL 3",
+					"TESLA MODEL S",
+					"TESLA MODEL X",
+					"TESLA MODEL Y"},
+				"TESLA",
+				'vehicles'[generic_make_model] IN {"TOYOTA AURIS",
+					"TOYOTA AVENSIS",
+					"TOYOTA AYGO",
+					"TOYOTA CARINA",
+					"TOYOTA CELICA",
+					"TOYOTA C-HR",
+					"TOYOTA COROLLA",
+					"TOYOTA GT86",
+					"TOYOTA HIACE",
+					"TOYOTA HILUX",
+					"TOYOTA IQ",
+					"TOYOTA LANDCRUISER",
+					"TOYOTA Model Missing",
+					"TOYOTA MR2",
+					"TOYOTA PREVIA",
+					"TOYOTA PRIUS",
+					"TOYOTA PRIUS+",
+					"TOYOTA PROACE",
+					"TOYOTA RAV4",
+					"TOYOTA STARLET",
+					"TOYOTA URBAN CRUISER",
+					"TOYOTA VERSO",
+					"TOYOTA YARIS"},
+				"TOYOTA",
+				'vehicles'[generic_make_model] IN {"TRIUMPH BONNEVILLE",
+					"TRIUMPH DAYTONA",
+					"TRIUMPH DAYTONA 675",
+					"TRIUMPH DAYTONA 955I",
+					"TRIUMPH MODEL MISSING",
+					"TRIUMPH ROCKET",
+					"TRIUMPH SCRAMBLER",
+					"TRIUMPH SPEED MASTER 865",
+					"TRIUMPH SPEED TRIPLE",
+					"TRIUMPH SPEED TRIPLE 1050",
+					"TRIUMPH SPEED TRIPLE R 1050",
+					"Triumph SPRINT GT",
+					"TRIUMPH SPRINT ST",
+					"TRIUMPH SPRINT ST 1050",
+					"TRIUMPH STREET SCRAMBLER",
+					"TRIUMPH STREET TRIPLE",
+					"Triumph THRUXTON",
+					"TRIUMPH THUNDERBIRD",
+					"Triumph TIGER",
+					"TRIUMPH TRIDENT"},
+				"TRIUMPH",
+				'vehicles'[generic_make_model] IN {"VAUXHALL ADAM",
+					"VAUXHALL AGILA",
+					"VAUXHALL ANTARA",
+					"VAUXHALL ASTRA",
+					"VAUXHALL ASTRAVAN",
+					"VAUXHALL CASCADA",
+					"VAUXHALL COMBO",
+					"VAUXHALL CORSA",
+					"VAUXHALL CROSSLAND",
+					"VAUXHALL FRONTERA",
+					"VAUXHALL GRANDLAND",
+					"VAUXHALL INSIGNIA",
+					"VAUXHALL MERIVA",
+					"VAUXHALL MODEL MISSING",
+					"VAUXHALL MOKKA",
+					"VAUXHALL MOVANO",
+					"VAUXHALL OMEGA",
+					"VAUXHALL SIGNUM",
+					"VAUXHALL TIGRA",
+					"VAUXHALL VECTRA",
+					"VAUXHALL VIVA",
+					"VAUXHALL VIVARO",
+					"VAUXHALL ZAFIRA"},
+				"VAUXHAUL",
+				'vehicles'[generic_make_model] IN {"OPEL Model Missing"},
+				"VAUXHAUL 2",
+				'vehicles'[generic_make_model] IN {"VOLKSWAGEN ARTEON",
+					"VOLKSWAGEN BEETLE",
+					"VOLKSWAGEN BORA",
+					"VOLKSWAGEN CADDY",
+					"VOLKSWAGEN CADDYMAXI",
+					"VOLKSWAGEN CARAVELLE",
+					"VOLKSWAGEN CC",
+					"VOLKSWAGEN CRAFTER",
+					"VOLKSWAGEN EOS",
+					"VOLKSWAGEN FOX",
+					"VOLKSWAGEN GOLF",
+					"VOLKSWAGEN HIGH UP",
+					"VOLKSWAGEN ID3",
+					"VOLKSWAGEN ID4",
+					"VOLKSWAGEN JETTA",
+					"VOLKSWAGEN LT 35",
+					"VOLKSWAGEN LUPO",
+					"VOLKSWAGEN Model Missing",
+					"VOLKSWAGEN PASSAT",
+					"VOLKSWAGEN POLO",
+					"VOLKSWAGEN SCIROCCO",
+					"VOLKSWAGEN SHARAN",
+					"VOLKSWAGEN T-CROSS",
+					"VOLKSWAGEN TIGUAN",
+					"VOLKSWAGEN TOUAREG",
+					"VOLKSWAGEN TOURAN",
+					"VOLKSWAGEN TRANSPORTER",
+					"VOLKSWAGEN T-ROC",
+					"VOLKSWAGEN UP",
+					"VOLKSWAGEN UP BY",
+					"VOLKSWAGEN URBAN"},
+				"VOLKSWAGEN",
+				'vehicles'[generic_make_model] IN {"VOLVO 850",
+					"VOLVO C 30",
+					"VOLVO C30",
+					"VOLVO C70",
+					"VOLVO MODEL MISSING",
+					"VOLVO S40",
+					"VOLVO S60",
+					"VOLVO S80",
+					"VOLVO S90",
+					"VOLVO V40",
+					"VOLVO V50",
+					"VOLVO V60",
+					"VOLVO V70",
+					"VOLVO V90",
+					"VOLVO XC40",
+					"VOLVO XC60",
+					"VOLVO XC70",
+					"VOLVO XC90"},
+				"VOLVO",
+				'vehicles'[generic_make_model] IN {"Yamaha BWS 125",
+					"YAMAHA CS 50 JOG",
+					"YAMAHA DELIGHT",
+					"YAMAHA DELIGHT 125",
+					"YAMAHA DT",
+					"YAMAHA DT 125 R",
+					"YAMAHA FJR",
+					"YAMAHA FJR 1300",
+					"YAMAHA FZ",
+					"Yamaha FZ1",
+					"Yamaha FZ6",
+					"Yamaha FZ8",
+					"YAMAHA FZS",
+					"YAMAHA FZS 1000",
+					"YAMAHA FZS 600",
+					"YAMAHA GPD",
+					"YAMAHA GPD 125",
+					"YAMAHA HW",
+					"YAMAHA MODEL MISSING",
+					"YAMAHA MT",
+					"YAMAHA MT07",
+					"YAMAHA MT09",
+					"YAMAHA MT10",
+					"YAMAHA MT125",
+					"YAMAHA MW",
+					"YAMAHA MW125",
+					"YAMAHA MWS",
+					"YAMAHA MWS125",
+					"YAMAHA NS",
+					"YAMAHA NS 50",
+					"YAMAHA NXC",
+					"YAMAHA NXC 125",
+					"YAMAHA R",
+					"YAMAHA R6",
+					"YAMAHA SR 125",
+					"YAMAHA TDM 900",
+					"YAMAHA TRACER",
+					"YAMAHA WR",
+					"YAMAHA WR 125",
+					"YAMAHA X",
+					"YAMAHA XC",
+					"YAMAHA XC 125",
+					"YAMAHA XC115",
+					"YAMAHA XJ",
+					"Yamaha XJ6",
+					"YAMAHA XJR",
+					"YAMAHA XJR 1300",
+					"YAMAHA X-MAX",
+					"YAMAHA X-MAX 125",
+					"YAMAHA X-MAX 300",
+					"YAMAHA XP",
+					"YAMAHA XP 500",
+					"YAMAHA XSR",
+					"YAMAHA XSR 700",
+					"YAMAHA XT",
+					"Yamaha XT 125",
+					"YAMAHA XT 600",
+					"YAMAHA XVS",
+					"YAMAHA XVS 950",
+					"YAMAHA YBR",
+					"YAMAHA YBR 125",
+					"YAMAHA YN 50 NEOS",
+					"YAMAHA YP",
+					"YAMAHA YP 125",
+					"YAMAHA YP 250 R",
+					"YAMAHA YP 400",
+					"YAMAHA YQ 50 AEROX",
+					"YAMAHA YS",
+					"YAMAHA YS 125",
+					"YAMAHA YZF",
+					"YAMAHA YZF 600 R",
+					"YAMAHA YZF R1",
+					"YAMAHA YZF R125",
+					"YAMAHA YZF R3",
+					"YAMAHA YZF R6"},
+				"YAMAHA",
+				"Other"
+			)
+		dataType: string
+		lineageTag: 3bf75cec-5a46-48f6-b1ec-eb509a1cf6b8
+		summarizeBy: none
+		isDataTypeInferred
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "vehicles"
+				          }
+				        },
+				        "Property": "generic_make_model"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"vehicles"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"ABARATH","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'ABARTH 500'"}}],[{"Literal":{"Value":"'ABARTH 595'"}}]]}}},{"DisplayName":"AJS","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'AJS DD 125'"}}],[{"Literal":{"Value":"'AJS MODENA 125'"}}]]}}},{"DisplayName":"ALFA ROMEO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'ALFA ROMEO 147'"}}],[{"Literal":{"Value":"'ALFA ROMEO 156'"}}],[{"Literal":{"Value":"'ALFA ROMEO 159'"}}],[{"Literal":{"Value":"'ALFA ROMEO GIULIA'"}}],[{"Literal":{"Value":"'ALFA ROMEO GIULIETTA'"}}],[{"Literal":{"Value":"'ALFA ROMEO GT'"}}],[{"Literal":{"Value":"'ALFA ROMEO MITO'"}}],[{"Literal":{"Value":"'ALFA ROMEO STELVIO'"}}]]}}},{"DisplayName":"APRILIA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'Aprilia DORSODURO'"}}],[{"Literal":{"Value":"'APRILIA MODEL MISSING'"}}],[{"Literal":{"Value":"'APRILIA RS 125'"}}],[{"Literal":{"Value":"'Aprilia RS4'"}}],[{"Literal":{"Value":"'APRILIA RS50'"}}],[{"Literal":{"Value":"'APRILIA SR 50'"}}],[{"Literal":{"Value":"'APRILIA SR MOTARD 125'"}}],[{"Literal":{"Value":"'APRILIA SX 125'"}}],[{"Literal":{"Value":"'APRILIA TUONO'"}}]]}}},{"DisplayName":"AUDI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'AUDI A1'"}}],[{"Literal":{"Value":"'AUDI A2'"}}],[{"Literal":{"Value":"'AUDI A3'"}}],[{"Literal":{"Value":"'AUDI A4'"}}],[{"Literal":{"Value":"'AUDI A5'"}}],[{"Literal":{"Value":"'AUDI A6'"}}],[{"Literal":{"Value":"'AUDI A7'"}}],[{"Literal":{"Value":"'AUDI A8'"}}],[{"Literal":{"Value":"'AUDI E-TRON'"}}],[{"Literal":{"Value":"'AUDI Model Missing'"}}],[{"Literal":{"Value":"'AUDI Q2'"}}],[{"Literal":{"Value":"'AUDI Q3'"}}],[{"Literal":{"Value":"'AUDI Q4'"}}],[{"Literal":{"Value":"'AUDI Q5'"}}],[{"Literal":{"Value":"'AUDI Q7'"}}],[{"Literal":{"Value":"'AUDI Q8'"}}],[{"Literal":{"Value":"'AUDI R8'"}}],[{"Literal":{"Value":"'AUDI RIO'"}}],[{"Literal":{"Value":"'AUDI RS3'"}}],[{"Literal":{"Value":"'AUDI RS4'"}}],[{"Literal":{"Value":"'AUDI RS5'"}}],[{"Literal":{"Value":"'AUDI RS6'"}}],[{"Literal":{"Value":"'AUDI RSQ3'"}}],[{"Literal":{"Value":"'AUDI S1'"}}],[{"Literal":{"Value":"'AUDI S3'"}}],[{"Literal":{"Value":"'AUDI S4'"}}],[{"Literal":{"Value":"'AUDI S5'"}}],[{"Literal":{"Value":"'AUDI SQ5'"}}],[{"Literal":{"Value":"'AUDI SQ7'"}}],[{"Literal":{"Value":"'AUDI TT'"}}],[{"Literal":{"Value":"'AUDI TTS'"}}]]}}},{"DisplayName":"BENELLI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'BENELLI BN'"}}],[{"Literal":{"Value":"'BENELLI TORNADO'"}}]]}}},{"DisplayName":"BMW","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'BMW 1 SERIES'"}}],[{"Literal":{"Value":"'BMW 2 SERIES'"}}],[{"Literal":{"Value":"'BMW 3 SERIES'"}}],[{"Literal":{"Value":"'BMW 4 SERIES'"}}],[{"Literal":{"Value":"'BMW 5 SERIES'"}}],[{"Literal":{"Value":"'BMW 6 SERIES'"}}],[{"Literal":{"Value":"'BMW 7 SERIES'"}}],[{"Literal":{"Value":"'BMW 8 SERIES'"}}],[{"Literal":{"Value":"'BMW F 650 GS'"}}],[{"Literal":{"Value":"'BMW F 750'"}}],[{"Literal":{"Value":"'BMW F 800'"}}],[{"Literal":{"Value":"'BMW G 310'"}}],[{"Literal":{"Value":"'BMW I3'"}}],[{"Literal":{"Value":"'BMW I4'"}}],[{"Literal":{"Value":"'BMW I8'"}}],[{"Literal":{"Value":"'BMW IX3'"}}],[{"Literal":{"Value":"'BMW K SERIES'"}}],[{"Literal":{"Value":"'BMW K1300 S'"}}],[{"Literal":{"Value":"'BMW M1'"}}],[{"Literal":{"Value":"'BMW M2'"}}],[{"Literal":{"Value":"'BMW M3'"}}],[{"Literal":{"Value":"'BMW M4'"}}],[{"Literal":{"Value":"'BMW M5'"}}],[{"Literal":{"Value":"'BMW MODEL MISSING'"}}],[{"Literal":{"Value":"'BMW R 1150 GS'"}}],[{"Literal":{"Value":"'BMW R 1200'"}}],[{"Literal":{"Value":"'BMW R 1250'"}}],[{"Literal":{"Value":"'BMW R NINE T'"}}],[{"Literal":{"Value":"'BMW R SERIES'"}}],[{"Literal":{"Value":"'BMW S 1000'"}}],[{"Literal":{"Value":"'BMW X1'"}}],[{"Literal":{"Value":"'BMW X2'"}}],[{"Literal":{"Value":"'BMW X3'"}}],[{"Literal":{"Value":"'BMW X4'"}}],[{"Literal":{"Value":"'BMW X5'"}}],[{"Literal":{"Value":"'BMW X6'"}}],[{"Literal":{"Value":"'BMW Z3'"}}],[{"Literal":{"Value":"'BMW Z4'"}}]]}}},{"DisplayName":"CHEVROLET","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'CHEVROLET AVEO'"}}],[{"Literal":{"Value":"'CHEVROLET CAPTIVA'"}}],[{"Literal":{"Value":"'CHEVROLET CRUZE'"}}],[{"Literal":{"Value":"'CHEVROLET KALOS'"}}],[{"Literal":{"Value":"'CHEVROLET LACETTI'"}}],[{"Literal":{"Value":"'CHEVROLET MATIZ'"}}],[{"Literal":{"Value":"'CHEVROLET ORLANDO'"}}],[{"Literal":{"Value":"'CHEVROLET SPARK'"}}],[{"Literal":{"Value":"'CHEVROLET TACUMA'"}}]]}}},{"DisplayName":"CHRYSLER","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'CHRYSLER 300'"}}],[{"Literal":{"Value":"'CHRYSLER 300C'"}}],[{"Literal":{"Value":"'CHRYSLER GRAND VOYAGER'"}}],[{"Literal":{"Value":"'CHRYSLER PT CRUISER'"}}],[{"Literal":{"Value":"'CHRYSLER VOYAGER'"}}],[{"Literal":{"Value":"'CHRYSLER YPSILON'"}}]]}}},{"DisplayName":"CITROEN","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'CITROEN BERLINGO'"}}],[{"Literal":{"Value":"'CITROEN C1'"}}],[{"Literal":{"Value":"'CITROEN C2'"}}],[{"Literal":{"Value":"'CITROEN C3'"}}],[{"Literal":{"Value":"'CITROEN C4'"}}],[{"Literal":{"Value":"'CITROEN C5'"}}],[{"Literal":{"Value":"'CITROEN C8'"}}],[{"Literal":{"Value":"'CITROEN C-CROSSER'"}}],[{"Literal":{"Value":"'CITROEN DISPATCH'"}}],[{"Literal":{"Value":"'CITROEN DS3'"}}],[{"Literal":{"Value":"'CITROEN DS4'"}}],[{"Literal":{"Value":"'CITROEN DS5'"}}],[{"Literal":{"Value":"'CITROEN NEMO'"}}],[{"Literal":{"Value":"'CITROEN RELAY'"}}],[{"Literal":{"Value":"'CITROEN SAXO'"}}],[{"Literal":{"Value":"'CITROEN XSARA'"}}]]}}},{"DisplayName":"DACIA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DACIA DUSTER'"}}],[{"Literal":{"Value":"'DACIA LOGAN'"}}],[{"Literal":{"Value":"'DACIA SANDERO'"}}]]}}},{"DisplayName":"DAEWOO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DAEWOO KALOS'"}}],[{"Literal":{"Value":"'DAEWOO MATIZ'"}}]]}}},{"DisplayName":"DAF","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DAF MODEL MISSING'"}}],[{"Literal":{"Value":"'DAF TRUCKS FA 45LF'"}}],[{"Literal":{"Value":"'DAF TRUCKS FA 55LF'"}}],[{"Literal":{"Value":"'DAF TRUCKS FAD 85CF'"}}],[{"Literal":{"Value":"'DAF TRUCKS Model Missing'"}}]]}}},{"DisplayName":"DAIHATSU","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DAIHATSU CHARADE'"}}],[{"Literal":{"Value":"'DAIHATSU SIRION'"}}],[{"Literal":{"Value":"'DAIHATSU TERIOS'"}}]]}}},{"DisplayName":"DODGE","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DODGE CALIBER'"}}],[{"Literal":{"Value":"'DODGE NITRO'"}}]]}}},{"DisplayName":"DUCATI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'DUCATI 899 PANIGALE'"}}],[{"Literal":{"Value":"'DUCATI HYPERMOTARD'"}}],[{"Literal":{"Value":"'DUCATI M696'"}}],[{"Literal":{"Value":"'DUCATI MULTISTRADA'"}}],[{"Literal":{"Value":"'Ducati MULTISTRADA 1200'"}}],[{"Literal":{"Value":"'DUCATI PANIGALE'"}}],[{"Literal":{"Value":"'DUCATI SCRAMBLER'"}}]]}}},{"DisplayName":"FIAT","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'FIAT 500'"}}],[{"Literal":{"Value":"'FIAT 500L'"}}],[{"Literal":{"Value":"'FIAT 500X'"}}],[{"Literal":{"Value":"'FIAT BRAVO'"}}],[{"Literal":{"Value":"'FIAT DOBLO'"}}],[{"Literal":{"Value":"'FIAT DUCATO'"}}],[{"Literal":{"Value":"'FIAT FIORINO'"}}],[{"Literal":{"Value":"'FIAT Model Missing'"}}],[{"Literal":{"Value":"'FIAT MULTIPLA'"}}],[{"Literal":{"Value":"'FIAT PANDA'"}}],[{"Literal":{"Value":"'FIAT PUNTO'"}}],[{"Literal":{"Value":"'FIAT QUBO'"}}],[{"Literal":{"Value":"'FIAT SCUDO'"}}],[{"Literal":{"Value":"'FIAT SEICENTO'"}}],[{"Literal":{"Value":"'FIAT STILO'"}}],[{"Literal":{"Value":"'FIAT TALENTO'"}}],[{"Literal":{"Value":"'FIAT TIPO'"}}]]}}},{"DisplayName":"FORD","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'FORD B-MAX'"}}],[{"Literal":{"Value":"'FORD C-MAX'"}}],[{"Literal":{"Value":"'FORD ECOSPORT'"}}],[{"Literal":{"Value":"'FORD EDGE'"}}],[{"Literal":{"Value":"'FORD ESCORT'"}}],[{"Literal":{"Value":"'FORD FIESTA'"}}],[{"Literal":{"Value":"'FORD FOCUS'"}}],[{"Literal":{"Value":"'FORD FUSION'"}}],[{"Literal":{"Value":"'FORD GALAXY'"}}],[{"Literal":{"Value":"'FORD GRAND C-MAX'"}}],[{"Literal":{"Value":"'FORD KA'"}}],[{"Literal":{"Value":"'FORD KA+'"}}],[{"Literal":{"Value":"'FORD KUGA'"}}],[{"Literal":{"Value":"'FORD MAVERICK'"}}],[{"Literal":{"Value":"'FORD Model Missing'"}}],[{"Literal":{"Value":"'FORD MONDEO'"}}],[{"Literal":{"Value":"'FORD MUSTANG'"}}],[{"Literal":{"Value":"'FORD MUSTANG MACH-E'"}}],[{"Literal":{"Value":"'FORD PUMA'"}}],[{"Literal":{"Value":"'FORD RANGER'"}}],[{"Literal":{"Value":"'FORD S-MAX'"}}],[{"Literal":{"Value":"'FORD STREETKA'"}}],[{"Literal":{"Value":"'FORD TOURNEO'"}}],[{"Literal":{"Value":"'FORD TRANSIT'"}}],[{"Literal":{"Value":"'FORD TRANSIT CONNECT'"}}],[{"Literal":{"Value":"'FORD TRANSIT COURIER'"}}],[{"Literal":{"Value":"'FORD TRANSIT CUSTOM'"}}]]}}},{"DisplayName":"HARLEY","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'HARLEY-DAVIDSON FLHR'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON FLS'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON FXD'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON FXDB'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON Model Missing'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON STREET'"}}],[{"Literal":{"Value":"'Harley-Davidson VRSC'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON XL'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON XL 1200'"}}],[{"Literal":{"Value":"'HARLEY-DAVIDSON XL 883'"}}]]}}},{"DisplayName":"HONDA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'HONDA ACCORD'"}}],[{"Literal":{"Value":"'HONDA AFS1102SH'"}}],[{"Literal":{"Value":"'HONDA ANC'"}}],[{"Literal":{"Value":"'HONDA ANC125'"}}],[{"Literal":{"Value":"'HONDA ANC125E'"}}],[{"Literal":{"Value":"'Honda ANF125'"}}],[{"Literal":{"Value":"'HONDA C90'"}}],[{"Literal":{"Value":"'HONDA CB'"}}],[{"Literal":{"Value":"'HONDA CB 650 FA'"}}],[{"Literal":{"Value":"'HONDA CB1000'"}}],[{"Literal":{"Value":"'HONDA CB500'"}}],[{"Literal":{"Value":"'HONDA CB500F'"}}],[{"Literal":{"Value":"'HONDA CB500FA'"}}],[{"Literal":{"Value":"'HONDA CB500XA'"}}],[{"Literal":{"Value":"'HONDA CB600 HORNET'"}}],[{"Literal":{"Value":"'HONDA CB600F'"}}],[{"Literal":{"Value":"'HONDA CB650'"}}],[{"Literal":{"Value":"'HONDA CB650FA'"}}],[{"Literal":{"Value":"'HONDA CBF'"}}],[{"Literal":{"Value":"'HONDA CBF 125'"}}],[{"Literal":{"Value":"'HONDA CBF1000A'"}}],[{"Literal":{"Value":"'Honda CBF125M'"}}],[{"Literal":{"Value":"'HONDA CBF125N'"}}],[{"Literal":{"Value":"'HONDA CBF500'"}}],[{"Literal":{"Value":"'HONDA CBF600N'"}}],[{"Literal":{"Value":"'HONDA CBF600SA'"}}],[{"Literal":{"Value":"'HONDA CBR'"}}],[{"Literal":{"Value":"'HONDA CBR 650 FA'"}}],[{"Literal":{"Value":"'HONDA CBR1000RR'"}}],[{"Literal":{"Value":"'HONDA CBR1100X'"}}],[{"Literal":{"Value":"'HONDA CBR1100XX'"}}],[{"Literal":{"Value":"'HONDA CBR125R'"}}],[{"Literal":{"Value":"'Honda CBR250'"}}],[{"Literal":{"Value":"'HONDA CBR500'"}}],[{"Literal":{"Value":"'HONDA CBR500RA'"}}],[{"Literal":{"Value":"'HONDA CBR600'"}}],[{"Literal":{"Value":"'HONDA CBR600F'"}}],[{"Literal":{"Value":"'HONDA CBR600RA'"}}],[{"Literal":{"Value":"'Honda CBR600RR'"}}],[{"Literal":{"Value":"'Honda CBR900RR'"}}],[{"Literal":{"Value":"'HONDA CG'"}}],[{"Literal":{"Value":"'HONDA CG125'"}}],[{"Literal":{"Value":"'HONDA CIVIC'"}}],[{"Literal":{"Value":"'HONDA CMX 500'"}}],[{"Literal":{"Value":"'HONDA CMX500'"}}],[{"Literal":{"Value":"'HONDA CRF 1100'"}}],[{"Literal":{"Value":"'HONDA CRF1000A'"}}],[{"Literal":{"Value":"'HONDA CRF1000D'"}}],[{"Literal":{"Value":"'HONDA CRF250L'"}}],[{"Literal":{"Value":"'HONDA CRV'"}}],[{"Literal":{"Value":"'HONDA CR-V'"}}],[{"Literal":{"Value":"'HONDA CR-Z'"}}],[{"Literal":{"Value":"'HONDA FES125'"}}],[{"Literal":{"Value":"'HONDA FR-V'"}}],[{"Literal":{"Value":"'HONDA FSH125'"}}],[{"Literal":{"Value":"'HONDA GLR 125'"}}],[{"Literal":{"Value":"'HONDA HR-V'"}}],[{"Literal":{"Value":"'HONDA INSIGHT'"}}],[{"Literal":{"Value":"'HONDA JAZZ'"}}],[{"Literal":{"Value":"'HONDA Model Missing'"}}],[{"Literal":{"Value":"'HONDA MSX125'"}}],[{"Literal":{"Value":"'HONDA NC 750'"}}],[{"Literal":{"Value":"'HONDA NC 750 SA'"}}],[{"Literal":{"Value":"'HONDA NC 750 XA'"}}],[{"Literal":{"Value":"'HONDA NC700X'"}}],[{"Literal":{"Value":"'HONDA NC750'"}}],[{"Literal":{"Value":"'HONDA NC750XA'"}}],[{"Literal":{"Value":"'HONDA NC750XD'"}}],[{"Literal":{"Value":"'HONDA NHX110WH'"}}],[{"Literal":{"Value":"'HONDA NSC'"}}],[{"Literal":{"Value":"'HONDA NSC 110'"}}],[{"Literal":{"Value":"'HONDA NSC110E'"}}],[{"Literal":{"Value":"'HONDA NSC110MP'"}}],[{"Literal":{"Value":"'Honda NSC110WH'"}}],[{"Literal":{"Value":"'HONDA NSC50E'"}}],[{"Literal":{"Value":"'HONDA NSC50WH'"}}],[{"Literal":{"Value":"'HONDA NSS'"}}],[{"Literal":{"Value":"'HONDA NSS 125 AD'"}}],[{"Literal":{"Value":"'HONDA NSS300A'"}}],[{"Literal":{"Value":"'HONDA NT650V DEAUVILLE'"}}],[{"Literal":{"Value":"'HONDA NT700V'"}}],[{"Literal":{"Value":"'HONDA PES 125'"}}],[{"Literal":{"Value":"'HONDA S2000'"}}],[{"Literal":{"Value":"'HONDA SCV100F'"}}],[{"Literal":{"Value":"'HONDA SES125'"}}],[{"Literal":{"Value":"'HONDA SH'"}}],[{"Literal":{"Value":"'HONDA SH 125'"}}],[{"Literal":{"Value":"'HONDA SH 125 AD'"}}],[{"Literal":{"Value":"'HONDA SH 300'"}}],[{"Literal":{"Value":"'HONDA SH125'"}}],[{"Literal":{"Value":"'HONDA SH300A'"}}],[{"Literal":{"Value":"'HONDA SH350'"}}],[{"Literal":{"Value":"'HONDA ST'"}}],[{"Literal":{"Value":"'HONDA ST1300A'"}}],[{"Literal":{"Value":"'HONDA STREAM'"}}],[{"Literal":{"Value":"'HONDA VFR 1200'"}}],[{"Literal":{"Value":"'HONDA VFR 800'"}}],[{"Literal":{"Value":"'HONDA VFR800'"}}],[{"Literal":{"Value":"'HONDA VFR800A'"}}],[{"Literal":{"Value":"'HONDA VFR800F'"}}],[{"Literal":{"Value":"'HONDA VT125C'"}}],[{"Literal":{"Value":"'HONDA VT750C'"}}],[{"Literal":{"Value":"'HONDA VTR1000F'"}}],[{"Literal":{"Value":"'HONDA WW125'"}}],[{"Literal":{"Value":"'HONDA WW125EX2'"}}],[{"Literal":{"Value":"'HONDA XL1000V'"}}],[{"Literal":{"Value":"'HONDA XL125V'"}}],[{"Literal":{"Value":"'HONDA XR125L'"}}]]}}},{"DisplayName":"HYUNDAI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'HYUNDAI ACCENT'"}}],[{"Literal":{"Value":"'HYUNDAI AMICA'"}}],[{"Literal":{"Value":"'HYUNDAI BAYON'"}}],[{"Literal":{"Value":"'HYUNDAI COUPE'"}}],[{"Literal":{"Value":"'HYUNDAI GETZ'"}}],[{"Literal":{"Value":"'HYUNDAI I10'"}}],[{"Literal":{"Value":"'HYUNDAI I20'"}}],[{"Literal":{"Value":"'HYUNDAI I30'"}}],[{"Literal":{"Value":"'HYUNDAI I40'"}}],[{"Literal":{"Value":"'HYUNDAI I800'"}}],[{"Literal":{"Value":"'HYUNDAI IONIQ'"}}],[{"Literal":{"Value":"'HYUNDAI IX20'"}}],[{"Literal":{"Value":"'HYUNDAI IX35'"}}],[{"Literal":{"Value":"'HYUNDAI KONA'"}}],[{"Literal":{"Value":"'HYUNDAI MATRIX'"}}],[{"Literal":{"Value":"'HYUNDAI SANTA FE'"}}],[{"Literal":{"Value":"'HYUNDAI TRAJET'"}}],[{"Literal":{"Value":"'HYUNDAI TUCSON'"}}],[{"Literal":{"Value":"'HYUNDAI VELOSTER'"}}]]}}},{"DisplayName":"JAGUAR","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'JAGUAR E-PACE'"}}],[{"Literal":{"Value":"'JAGUAR F TYPE'"}}],[{"Literal":{"Value":"'JAGUAR F-PACE'"}}],[{"Literal":{"Value":"'JAGUAR F-TYPE'"}}],[{"Literal":{"Value":"'JAGUAR I-PACE'"}}],[{"Literal":{"Value":"'JAGUAR S TYPE'"}}],[{"Literal":{"Value":"'JAGUAR X TYPE'"}}],[{"Literal":{"Value":"'JAGUAR XE SERIES'"}}],[{"Literal":{"Value":"'JAGUAR XF SERIES'"}}],[{"Literal":{"Value":"'JAGUAR XJ SERIES'"}}],[{"Literal":{"Value":"'JAGUAR XK SERIES'"}}]]}}},{"DisplayName":"JEEP","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'JEEP CHEROKEE'"}}],[{"Literal":{"Value":"'JEEP COMPASS'"}}],[{"Literal":{"Value":"'JEEP GRAND CHEROKEE'"}}],[{"Literal":{"Value":"'JEEP PATRIOT'"}}],[{"Literal":{"Value":"'JEEP RENEGADE'"}}],[{"Literal":{"Value":"'JEEP WRANGLER'"}}]]}}},{"DisplayName":"JOHN DEERE","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'JOHN DEERE 6000 SERIES'"}}],[{"Literal":{"Value":"'JOHN DEERE 6100 SERIES'"}}],[{"Literal":{"Value":"'JOHN DEERE 6200 SERIES'"}}],[{"Literal":{"Value":"'JOHN DEERE 6R SERIES'"}}],[{"Literal":{"Value":"'JOHN DEERE MODEL MISSING'"}}]]}}},{"DisplayName":"KAWASAKI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'KAWASAKI BR125'"}}],[{"Literal":{"Value":"'KAWASAKI BX 125'"}}],[{"Literal":{"Value":"'KAWASAKI BX125'"}}],[{"Literal":{"Value":"'KAWASAKI EN650'"}}],[{"Literal":{"Value":"'KAWASAKI ER'"}}],[{"Literal":{"Value":"'KAWASAKI ER500'"}}],[{"Literal":{"Value":"'KAWASAKI ER650'"}}],[{"Literal":{"Value":"'KAWASAKI EX'"}}],[{"Literal":{"Value":"'KAWASAKI EX 300'"}}],[{"Literal":{"Value":"'KAWASAKI EX 650'"}}],[{"Literal":{"Value":"'KAWASAKI EX250'"}}],[{"Literal":{"Value":"'KAWASAKI EX500'"}}],[{"Literal":{"Value":"'KAWASAKI EX650'"}}],[{"Literal":{"Value":"'KAWASAKI KLE'"}}],[{"Literal":{"Value":"'KAWASAKI KLE650'"}}],[{"Literal":{"Value":"'KAWASAKI KLX125'"}}],[{"Literal":{"Value":"'KAWASAKI KLZ1000'"}}],[{"Literal":{"Value":"'KAWASAKI Model Missing'"}}],[{"Literal":{"Value":"'KAWASAKI SC'"}}],[{"Literal":{"Value":"'KAWASAKI VN'"}}],[{"Literal":{"Value":"'KAWASAKI ZG1400'"}}],[{"Literal":{"Value":"'KAWASAKI ZR'"}}],[{"Literal":{"Value":"'KAWASAKI ZR1000'"}}],[{"Literal":{"Value":"'KAWASAKI ZR1200'"}}],[{"Literal":{"Value":"'KAWASAKI ZR750'"}}],[{"Literal":{"Value":"'KAWASAKI ZR800'"}}],[{"Literal":{"Value":"'KAWASAKI ZR900'"}}],[{"Literal":{"Value":"'KAWASAKI ZX'"}}],[{"Literal":{"Value":"'KAWASAKI ZX1000'"}}],[{"Literal":{"Value":"'KAWASAKI ZX1002'"}}],[{"Literal":{"Value":"'KAWASAKI ZX1200'"}}],[{"Literal":{"Value":"'KAWASAKI ZX1400'"}}],[{"Literal":{"Value":"'KAWASAKI ZX600'"}}],[{"Literal":{"Value":"'KAWASAKI ZX636'"}}],[{"Literal":{"Value":"'KAWASAKI ZX900'"}}]]}}},{"DisplayName":"KIA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'KIA CARENS'"}}],[{"Literal":{"Value":"'KIA CEED'"}}],[{"Literal":{"Value":"'KIA CERATO'"}}],[{"Literal":{"Value":"'KIA EV6'"}}],[{"Literal":{"Value":"'KIA NIRO'"}}],[{"Literal":{"Value":"'KIA OPTIMA'"}}],[{"Literal":{"Value":"'KIA PICANTO'"}}],[{"Literal":{"Value":"'KIA PRO CEED'"}}],[{"Literal":{"Value":"'KIA RIO'"}}],[{"Literal":{"Value":"'KIA SEDONA'"}}],[{"Literal":{"Value":"'KIA SORENTO'"}}],[{"Literal":{"Value":"'KIA SOUL'"}}],[{"Literal":{"Value":"'KIA SPORTAGE'"}}],[{"Literal":{"Value":"'KIA STONIC'"}}],[{"Literal":{"Value":"'KIA VENGA'"}}],[{"Literal":{"Value":"'KIA XCEED'"}}]]}}},{"DisplayName":"LAND ROVER","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'LAND ROVER 90'"}}],[{"Literal":{"Value":"'LAND ROVER DEFENDER'"}}],[{"Literal":{"Value":"'LAND ROVER DISCOVERY'"}}],[{"Literal":{"Value":"'LAND ROVER FREELANDER'"}}],[{"Literal":{"Value":"'LAND ROVER Model Missing'"}}],[{"Literal":{"Value":"'LAND ROVER RANGE ROVER'"}}],[{"Literal":{"Value":"'LAND ROVER RANGE ROVER EVOQUE'"}}],[{"Literal":{"Value":"'LAND ROVER RANGE ROVER SPORT'"}}],[{"Literal":{"Value":"'LAND ROVER RANGE ROVER VELAR'"}}]]}}},{"DisplayName":"LEXMOTO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'LEXMOTO ASPIRE 125'"}}],[{"Literal":{"Value":"'LEXMOTO ASSAULT 125'"}}],[{"Literal":{"Value":"'LEXMOTO AURA'"}}],[{"Literal":{"Value":"'LEXMOTO CL'"}}],[{"Literal":{"Value":"'LEXMOTO DIABLO'"}}],[{"Literal":{"Value":"'LEXMOTO DIABLO 125'"}}],[{"Literal":{"Value":"'LEXMOTO ECHO'"}}],[{"Literal":{"Value":"'LEXMOTO ECHO 50'"}}],[{"Literal":{"Value":"'LEXMOTO ENIGMA'"}}],[{"Literal":{"Value":"'LEXMOTO FMR 125'"}}],[{"Literal":{"Value":"'LEXMOTO FMS 125'"}}],[{"Literal":{"Value":"'LEXMOTO FMX 125'"}}],[{"Literal":{"Value":"'Lexmoto GLADIATOR'"}}],[{"Literal":{"Value":"'LEXMOTO HUNTER'"}}],[{"Literal":{"Value":"'LEXMOTO ISCA 125'"}}],[{"Literal":{"Value":"'LEXMOTO LXR'"}}],[{"Literal":{"Value":"'LEXMOTO LXS'"}}],[{"Literal":{"Value":"'LEXMOTO MATADOR'"}}],[{"Literal":{"Value":"'LEXMOTO MICHIGAN'"}}],[{"Literal":{"Value":"'LEXMOTO MILANO'"}}],[{"Literal":{"Value":"'LEXMOTO MONZA 125'"}}],[{"Literal":{"Value":"'LEXMOTO TITAN'"}}],[{"Literal":{"Value":"'LEXMOTO TITAN 125'"}}],[{"Literal":{"Value":"'LEXMOTO VENOM 125'"}}],[{"Literal":{"Value":"'LEXMOTO VIPER 125'"}}],[{"Literal":{"Value":"'LEXMOTO XFLM 125'"}}],[{"Literal":{"Value":"'Lexmoto XTR 125'"}}],[{"Literal":{"Value":"'LEXMOTO ZSA 125'"}}],[{"Literal":{"Value":"'LEXMOTO ZSB'"}}],[{"Literal":{"Value":"'LEXMOTO ZSB 125'"}}],[{"Literal":{"Value":"'LEXMOTO ZSF'"}}],[{"Literal":{"Value":"'LEXMOTO ZSF 125'"}}],[{"Literal":{"Value":"'LEXMOTO ZSX'"}}],[{"Literal":{"Value":"'LEXMOTO ZSX 125'"}}]]}}},{"DisplayName":"LEXUS","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'LEXUS CT 200'"}}],[{"Literal":{"Value":"'LEXUS ES 300'"}}],[{"Literal":{"Value":"'LEXUS GS 300'"}}],[{"Literal":{"Value":"'LEXUS GS 450'"}}],[{"Literal":{"Value":"'LEXUS GS300'"}}],[{"Literal":{"Value":"'LEXUS IS 200'"}}],[{"Literal":{"Value":"'LEXUS IS 220'"}}],[{"Literal":{"Value":"'LEXUS IS 250'"}}],[{"Literal":{"Value":"'LEXUS IS 300'"}}],[{"Literal":{"Value":"'LEXUS IS200'"}}],[{"Literal":{"Value":"'LEXUS IS220'"}}],[{"Literal":{"Value":"'LEXUS IS250'"}}],[{"Literal":{"Value":"'LEXUS IS300'"}}],[{"Literal":{"Value":"'LEXUS NX 300'"}}],[{"Literal":{"Value":"'LEXUS NX300'"}}],[{"Literal":{"Value":"'LEXUS RX 300'"}}],[{"Literal":{"Value":"'LEXUS RX 400'"}}],[{"Literal":{"Value":"'LEXUS RX 450'"}}],[{"Literal":{"Value":"'LEXUS RX300'"}}],[{"Literal":{"Value":"'LEXUS RX400'"}}],[{"Literal":{"Value":"'LEXUS RX450'"}}],[{"Literal":{"Value":"'LEXUS UX 250'"}}],[{"Literal":{"Value":"'LEXUS UX 250H'"}}]]}}},{"DisplayName":"MAZDA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'MAZDA 2'"}}],[{"Literal":{"Value":"'MAZDA 3'"}}],[{"Literal":{"Value":"'MAZDA 323'"}}],[{"Literal":{"Value":"'MAZDA 5'"}}],[{"Literal":{"Value":"'MAZDA 6'"}}],[{"Literal":{"Value":"'MAZDA CX3'"}}],[{"Literal":{"Value":"'MAZDA CX-3'"}}],[{"Literal":{"Value":"'MAZDA CX-30'"}}],[{"Literal":{"Value":"'MAZDA CX5'"}}],[{"Literal":{"Value":"'MAZDA CX-5'"}}],[{"Literal":{"Value":"'MAZDA CX7'"}}],[{"Literal":{"Value":"'MAZDA MODEL MISSING'"}}],[{"Literal":{"Value":"'MAZDA MX-5'"}}],[{"Literal":{"Value":"'MAZDA RX8'"}}],[{"Literal":{"Value":"'MAZDA RX-8'"}}]]}}},{"DisplayName":"MERCEDES","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'MERCEDES 190'"}}],[{"Literal":{"Value":"'MERCEDES 200'"}}],[{"Literal":{"Value":"'MERCEDES A CLASS'"}}],[{"Literal":{"Value":"'MERCEDES AMG CLASS'"}}],[{"Literal":{"Value":"'MERCEDES B CLASS'"}}],[{"Literal":{"Value":"'MERCEDES C CLASS'"}}],[{"Literal":{"Value":"'MERCEDES CITAN'"}}],[{"Literal":{"Value":"'MERCEDES CL CLASS'"}}],[{"Literal":{"Value":"'MERCEDES CLA CLASS'"}}],[{"Literal":{"Value":"'MERCEDES CLC CLASS'"}}],[{"Literal":{"Value":"'MERCEDES CLK CLASS'"}}],[{"Literal":{"Value":"'MERCEDES CLS CLASS'"}}],[{"Literal":{"Value":"'MERCEDES E CLASS'"}}],[{"Literal":{"Value":"'MERCEDES EQA CLASS'"}}],[{"Literal":{"Value":"'MERCEDES EQC CLASS'"}}],[{"Literal":{"Value":"'MERCEDES G CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GL CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GLA CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GLB CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GLC CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GLE CLASS'"}}],[{"Literal":{"Value":"'MERCEDES GLS CLASS'"}}],[{"Literal":{"Value":"'MERCEDES ML CLASS'"}}],[{"Literal":{"Value":"'MERCEDES MODEL MISSING'"}}],[{"Literal":{"Value":"'MERCEDES R CLASS'"}}],[{"Literal":{"Value":"'MERCEDES S CLASS'"}}],[{"Literal":{"Value":"'MERCEDES SL CLASS'"}}],[{"Literal":{"Value":"'MERCEDES SLC CLASS'"}}],[{"Literal":{"Value":"'MERCEDES SLK CLASS'"}}],[{"Literal":{"Value":"'MERCEDES SPRINTER'"}}],[{"Literal":{"Value":"'MERCEDES TOURISMO'"}}],[{"Literal":{"Value":"'MERCEDES V CLASS'"}}],[{"Literal":{"Value":"'MERCEDES VIANO'"}}],[{"Literal":{"Value":"'MERCEDES VITO'"}}]]}}},{"DisplayName":"MG","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'MG 3'"}}],[{"Literal":{"Value":"'MG 5'"}}],[{"Literal":{"Value":"'MG 6'"}}],[{"Literal":{"Value":"'MG GS'"}}],[{"Literal":{"Value":"'MG HS'"}}],[{"Literal":{"Value":"'MG MGF'"}}],[{"Literal":{"Value":"'MG TF'"}}],[{"Literal":{"Value":"'MG XS'"}}],[{"Literal":{"Value":"'MG ZR'"}}],[{"Literal":{"Value":"'MG ZS'"}}],[{"Literal":{"Value":"'MG ZT'"}}]]}}},{"DisplayName":"MINI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'MINI CLUBMAN'"}}],[{"Literal":{"Value":"'MINI COOPER'"}}],[{"Literal":{"Value":"'MINI COUNTRYMAN'"}}],[{"Literal":{"Value":"'MINI FIRST'"}}],[{"Literal":{"Value":"'MINI JOHN COOPER WORKS'"}}],[{"Literal":{"Value":"'MINI Model Missing'"}}],[{"Literal":{"Value":"'MINI ONE'"}}],[{"Literal":{"Value":"'MINI PACEMAN'"}}],[{"Literal":{"Value":"'MINI ROADSTER'"}}]]}}},{"DisplayName":"MITSUBISHI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'MITSUBISHI ASX'"}}],[{"Literal":{"Value":"'MITSUBISHI CARISMA'"}}],[{"Literal":{"Value":"'MITSUBISHI COLT'"}}],[{"Literal":{"Value":"'MITSUBISHI ECLIPSE'"}}],[{"Literal":{"Value":"'MITSUBISHI FUSO CANTER'"}}],[{"Literal":{"Value":"'MITSUBISHI GRANDIS'"}}],[{"Literal":{"Value":"'MITSUBISHI L200'"}}],[{"Literal":{"Value":"'MITSUBISHI LANCER'"}}],[{"Literal":{"Value":"'MITSUBISHI MIRAGE'"}}],[{"Literal":{"Value":"'MITSUBISHI Model Missing'"}}],[{"Literal":{"Value":"'MITSUBISHI OUTLANDER'"}}],[{"Literal":{"Value":"'MITSUBISHI SHOGUN'"}}],[{"Literal":{"Value":"'MITSUBISHI SPACE STAR'"}}]]}}},{"DisplayName":"NISSAN","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'NISSAN 350'"}}],[{"Literal":{"Value":"'NISSAN ALMERA'"}}],[{"Literal":{"Value":"'NISSAN CABSTAR'"}}],[{"Literal":{"Value":"'NISSAN E-NV200'"}}],[{"Literal":{"Value":"'NISSAN JUKE'"}}],[{"Literal":{"Value":"'NISSAN LEAF'"}}],[{"Literal":{"Value":"'NISSAN MICRA'"}}],[{"Literal":{"Value":"'NISSAN Model Missing'"}}],[{"Literal":{"Value":"'NISSAN NAVARA'"}}],[{"Literal":{"Value":"'NISSAN NOTE'"}}],[{"Literal":{"Value":"'NISSAN NT400'"}}],[{"Literal":{"Value":"'NISSAN NV200'"}}],[{"Literal":{"Value":"'NISSAN NV300'"}}],[{"Literal":{"Value":"'NISSAN NV400'"}}],[{"Literal":{"Value":"'NISSAN PATHFINDER'"}}],[{"Literal":{"Value":"'NISSAN PIXO'"}}],[{"Literal":{"Value":"'NISSAN PRIMASTAR'"}}],[{"Literal":{"Value":"'NISSAN PRIMERA'"}}],[{"Literal":{"Value":"'NISSAN PULSAR'"}}],[{"Literal":{"Value":"'NISSAN QASHQAI'"}}],[{"Literal":{"Value":"'NISSAN TERRANO'"}}],[{"Literal":{"Value":"'NISSAN X-TRAIL'"}}]]}}},{"DisplayName":"PEUGEOT","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'PEUGEOT 1007'"}}],[{"Literal":{"Value":"'PEUGEOT 106'"}}],[{"Literal":{"Value":"'PEUGEOT 107'"}}],[{"Literal":{"Value":"'PEUGEOT 108'"}}],[{"Literal":{"Value":"'PEUGEOT 2008'"}}],[{"Literal":{"Value":"'PEUGEOT 205'"}}],[{"Literal":{"Value":"'PEUGEOT 206'"}}],[{"Literal":{"Value":"'PEUGEOT 207'"}}],[{"Literal":{"Value":"'PEUGEOT 208'"}}],[{"Literal":{"Value":"'PEUGEOT 3008'"}}],[{"Literal":{"Value":"'PEUGEOT 306'"}}],[{"Literal":{"Value":"'PEUGEOT 307'"}}],[{"Literal":{"Value":"'PEUGEOT 308'"}}],[{"Literal":{"Value":"'PEUGEOT 406'"}}],[{"Literal":{"Value":"'PEUGEOT 407'"}}],[{"Literal":{"Value":"'PEUGEOT 5008'"}}],[{"Literal":{"Value":"'PEUGEOT 508'"}}],[{"Literal":{"Value":"'PEUGEOT 807'"}}],[{"Literal":{"Value":"'PEUGEOT BIPPER'"}}],[{"Literal":{"Value":"'PEUGEOT BOXER'"}}],[{"Literal":{"Value":"'PEUGEOT E7'"}}],[{"Literal":{"Value":"'PEUGEOT EXPERT'"}}],[{"Literal":{"Value":"'PEUGEOT HORIZON'"}}],[{"Literal":{"Value":"'Peugeot KISBEE'"}}],[{"Literal":{"Value":"'Peugeot LUDIX'"}}],[{"Literal":{"Value":"'PEUGEOT Model Missing'"}}],[{"Literal":{"Value":"'PEUGEOT PARTNER'"}}],[{"Literal":{"Value":"'PEUGEOT PREMIER'"}}],[{"Literal":{"Value":"'PEUGEOT RCZ'"}}],[{"Literal":{"Value":"'PEUGEOT RIFTER'"}}],[{"Literal":{"Value":"'PEUGEOT SPEEDFIGHT'"}}],[{"Literal":{"Value":"'PEUGEOT TWEET'"}}],[{"Literal":{"Value":"'PEUGEOT TWEET 125'"}}],[{"Literal":{"Value":"'PEUGEOT TWEET 50'"}}],[{"Literal":{"Value":"'Peugeot V CLIC'"}}]]}}},{"DisplayName":"PIAGIO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'PIAGGIO ET2'"}}],[{"Literal":{"Value":"'PIAGGIO FLY'"}}],[{"Literal":{"Value":"'PIAGGIO LIBERTY'"}}],[{"Literal":{"Value":"'PIAGGIO LX 125'"}}],[{"Literal":{"Value":"'PIAGGIO MEDLEY'"}}],[{"Literal":{"Value":"'PIAGGIO MEDLEY 125'"}}],[{"Literal":{"Value":"'PIAGGIO MP3'"}}],[{"Literal":{"Value":"'PIAGGIO NRG'"}}],[{"Literal":{"Value":"'PIAGGIO PX125'"}}],[{"Literal":{"Value":"'Piaggio TYPHOON'"}}],[{"Literal":{"Value":"'PIAGGIO VESPA'"}}],[{"Literal":{"Value":"'PIAGGIO X8'"}}],[{"Literal":{"Value":"'PIAGGIO XEVO'"}}],[{"Literal":{"Value":"'PIAGGIO ZIP'"}}]]}}},{"DisplayName":"PORSCHE","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'PORSCHE 718'"}}],[{"Literal":{"Value":"'PORSCHE 911'"}}],[{"Literal":{"Value":"'PORSCHE BOXSTER'"}}],[{"Literal":{"Value":"'PORSCHE CAYENNE'"}}],[{"Literal":{"Value":"'PORSCHE CAYMAN'"}}],[{"Literal":{"Value":"'PORSCHE MACAN'"}}],[{"Literal":{"Value":"'PORSCHE PANAMERA'"}}],[{"Literal":{"Value":"'PORSCHE TAYCAN'"}}]]}}},{"DisplayName":"RENAULT","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'RENAULT ARKANA'"}}],[{"Literal":{"Value":"'RENAULT CAPTUR'"}}],[{"Literal":{"Value":"'RENAULT CLIO'"}}],[{"Literal":{"Value":"'RENAULT ESPACE'"}}],[{"Literal":{"Value":"'RENAULT GRAND SCENIC'"}}],[{"Literal":{"Value":"'RENAULT KADJAR'"}}],[{"Literal":{"Value":"'RENAULT KANGOO'"}}],[{"Literal":{"Value":"'RENAULT KOLEOS'"}}],[{"Literal":{"Value":"'RENAULT LAGUNA'"}}],[{"Literal":{"Value":"'RENAULT MASTER'"}}],[{"Literal":{"Value":"'RENAULT MEGANE'"}}],[{"Literal":{"Value":"'RENAULT Model Missing'"}}],[{"Literal":{"Value":"'RENAULT MODUS'"}}],[{"Literal":{"Value":"'RENAULT SCENIC'"}}],[{"Literal":{"Value":"'RENAULT TRAFIC'"}}],[{"Literal":{"Value":"'RENAULT TRUCKS MASTER'"}}],[{"Literal":{"Value":"'RENAULT TRUCKS MODEL MISSING'"}}],[{"Literal":{"Value":"'RENAULT TWINGO'"}}],[{"Literal":{"Value":"'RENAULT ZOE'"}}]]}}},{"DisplayName":"ROVER","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'ROVER 200 SERIES'"}}],[{"Literal":{"Value":"'ROVER 25'"}}],[{"Literal":{"Value":"'ROVER 400 SERIES'"}}],[{"Literal":{"Value":"'ROVER 45'"}}],[{"Literal":{"Value":"'ROVER 75'"}}],[{"Literal":{"Value":"'ROVER MINI'"}}]]}}},{"DisplayName":"SEAT","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'SEAT ALHAMBRA'"}}],[{"Literal":{"Value":"'SEAT ALTEA'"}}],[{"Literal":{"Value":"'SEAT ARONA'"}}],[{"Literal":{"Value":"'SEAT AROSA'"}}],[{"Literal":{"Value":"'SEAT ATECA'"}}],[{"Literal":{"Value":"'SEAT EXEO'"}}],[{"Literal":{"Value":"'SEAT IBIZA'"}}],[{"Literal":{"Value":"'SEAT LEON'"}}],[{"Literal":{"Value":"'SEAT MII'"}}],[{"Literal":{"Value":"'SEAT TARRACO'"}}],[{"Literal":{"Value":"'SEAT TOLEDO'"}}]]}}},{"DisplayName":"SKODA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'SKODA CITIGO'"}}],[{"Literal":{"Value":"'SKODA ENYAQ'"}}],[{"Literal":{"Value":"'SKODA FABIA'"}}],[{"Literal":{"Value":"'SKODA FELICIA'"}}],[{"Literal":{"Value":"'SKODA KAMIQ'"}}],[{"Literal":{"Value":"'SKODA KAROQ'"}}],[{"Literal":{"Value":"'SKODA KODIAQ'"}}],[{"Literal":{"Value":"'SKODA OCTAVIA'"}}],[{"Literal":{"Value":"'SKODA RAPID'"}}],[{"Literal":{"Value":"'SKODA ROOMSTER'"}}],[{"Literal":{"Value":"'SKODA SCALA'"}}],[{"Literal":{"Value":"'SKODA SUPERB'"}}],[{"Literal":{"Value":"'SKODA YETI'"}}]]}}},{"DisplayName":"SMART","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'SMART CITY'"}}],[{"Literal":{"Value":"'SMART FORFOUR'"}}],[{"Literal":{"Value":"'SMART FORTWO'"}}],[{"Literal":{"Value":"'SMART ROADSTER'"}}]]}}},{"DisplayName":"SUBARU","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'SUBARU FORESTER'"}}],[{"Literal":{"Value":"'SUBARU IMPREZA'"}}],[{"Literal":{"Value":"'SUBARU LEGACY'"}}],[{"Literal":{"Value":"'SUBARU OUTBACK'"}}],[{"Literal":{"Value":"'SUBARU XV'"}}]]}}},{"DisplayName":"SUZUKI","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'SUZUKI ALTO'"}}],[{"Literal":{"Value":"'SUZUKI AN 400'"}}],[{"Literal":{"Value":"'SUZUKI BALENO'"}}],[{"Literal":{"Value":"'SUZUKI CARRY'"}}],[{"Literal":{"Value":"'SUZUKI CELERIO'"}}],[{"Literal":{"Value":"'SUZUKI DL 1000'"}}],[{"Literal":{"Value":"'SUZUKI DL 650'"}}],[{"Literal":{"Value":"'SUZUKI DR 125'"}}],[{"Literal":{"Value":"'SUZUKI DR Z400'"}}],[{"Literal":{"Value":"'SUZUKI GRAND VITARA'"}}],[{"Literal":{"Value":"'SUZUKI GS 500'"}}],[{"Literal":{"Value":"'SUZUKI GSF 1200'"}}],[{"Literal":{"Value":"'SUZUKI GSF 1250'"}}],[{"Literal":{"Value":"'SUZUKI GSF 600'"}}],[{"Literal":{"Value":"'SUZUKI GSF 650'"}}],[{"Literal":{"Value":"'SUZUKI GSR 600'"}}],[{"Literal":{"Value":"'SUZUKI GSR 750'"}}],[{"Literal":{"Value":"'SUZUKI GSX 1250'"}}],[{"Literal":{"Value":"'SUZUKI GSX 1300'"}}],[{"Literal":{"Value":"'SUZUKI GSX 1400'"}}],[{"Literal":{"Value":"'SUZUKI GSX 650'"}}],[{"Literal":{"Value":"'SUZUKI GSX 750'"}}],[{"Literal":{"Value":"'SUZUKI GSXR'"}}],[{"Literal":{"Value":"'SUZUKI GSXR 1000'"}}],[{"Literal":{"Value":"'SUZUKI GSXR 1100'"}}],[{"Literal":{"Value":"'SUZUKI GSXR 600'"}}],[{"Literal":{"Value":"'SUZUKI GSXR 750'"}}],[{"Literal":{"Value":"'SUZUKI GSXS'"}}],[{"Literal":{"Value":"'SUZUKI GSXS 1000'"}}],[{"Literal":{"Value":"'SUZUKI GSXS 1100'"}}],[{"Literal":{"Value":"'SUZUKI GSXS 750'"}}],[{"Literal":{"Value":"'SUZUKI GZ 125'"}}],[{"Literal":{"Value":"'SUZUKI IGNIS'"}}],[{"Literal":{"Value":"'SUZUKI JIMNY'"}}],[{"Literal":{"Value":"'SUZUKI LIANA'"}}],[{"Literal":{"Value":"'SUZUKI Model Missing'"}}],[{"Literal":{"Value":"'SUZUKI RV 125'"}}],[{"Literal":{"Value":"'SUZUKI SFV 650'"}}],[{"Literal":{"Value":"'SUZUKI SPLASH'"}}],[{"Literal":{"Value":"'SUZUKI SV 1000'"}}],[{"Literal":{"Value":"'SUZUKI SV 650'"}}],[{"Literal":{"Value":"'SUZUKI SWIFT'"}}],[{"Literal":{"Value":"'SUZUKI SX4'"}}],[{"Literal":{"Value":"'SUZUKI TL 1000'"}}],[{"Literal":{"Value":"'Suzuki UH 125'"}}],[{"Literal":{"Value":"'SUZUKI UK 110'"}}],[{"Literal":{"Value":"'SUZUKI VITARA'"}}],[{"Literal":{"Value":"'SUZUKI WAGON R+'"}}]]}}},{"DisplayName":"TESLA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'TESLA MODEL 3'"}}],[{"Literal":{"Value":"'TESLA MODEL S'"}}],[{"Literal":{"Value":"'TESLA MODEL X'"}}],[{"Literal":{"Value":"'TESLA MODEL Y'"}}]]}}},{"DisplayName":"TOYOTA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'TOYOTA AURIS'"}}],[{"Literal":{"Value":"'TOYOTA AVENSIS'"}}],[{"Literal":{"Value":"'TOYOTA AYGO'"}}],[{"Literal":{"Value":"'TOYOTA CARINA'"}}],[{"Literal":{"Value":"'TOYOTA CELICA'"}}],[{"Literal":{"Value":"'TOYOTA C-HR'"}}],[{"Literal":{"Value":"'TOYOTA COROLLA'"}}],[{"Literal":{"Value":"'TOYOTA GT86'"}}],[{"Literal":{"Value":"'TOYOTA HIACE'"}}],[{"Literal":{"Value":"'TOYOTA HILUX'"}}],[{"Literal":{"Value":"'TOYOTA IQ'"}}],[{"Literal":{"Value":"'TOYOTA LANDCRUISER'"}}],[{"Literal":{"Value":"'TOYOTA Model Missing'"}}],[{"Literal":{"Value":"'TOYOTA MR2'"}}],[{"Literal":{"Value":"'TOYOTA PREVIA'"}}],[{"Literal":{"Value":"'TOYOTA PRIUS'"}}],[{"Literal":{"Value":"'TOYOTA PRIUS+'"}}],[{"Literal":{"Value":"'TOYOTA PROACE'"}}],[{"Literal":{"Value":"'TOYOTA RAV4'"}}],[{"Literal":{"Value":"'TOYOTA STARLET'"}}],[{"Literal":{"Value":"'TOYOTA URBAN CRUISER'"}}],[{"Literal":{"Value":"'TOYOTA VERSO'"}}],[{"Literal":{"Value":"'TOYOTA YARIS'"}}]]}}},{"DisplayName":"TRIUMPH","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'TRIUMPH BONNEVILLE'"}}],[{"Literal":{"Value":"'TRIUMPH DAYTONA'"}}],[{"Literal":{"Value":"'TRIUMPH DAYTONA 675'"}}],[{"Literal":{"Value":"'TRIUMPH DAYTONA 955I'"}}],[{"Literal":{"Value":"'TRIUMPH MODEL MISSING'"}}],[{"Literal":{"Value":"'TRIUMPH ROCKET'"}}],[{"Literal":{"Value":"'TRIUMPH SCRAMBLER'"}}],[{"Literal":{"Value":"'TRIUMPH SPEED MASTER 865'"}}],[{"Literal":{"Value":"'TRIUMPH SPEED TRIPLE'"}}],[{"Literal":{"Value":"'TRIUMPH SPEED TRIPLE 1050'"}}],[{"Literal":{"Value":"'TRIUMPH SPEED TRIPLE R 1050'"}}],[{"Literal":{"Value":"'Triumph SPRINT GT'"}}],[{"Literal":{"Value":"'TRIUMPH SPRINT ST'"}}],[{"Literal":{"Value":"'TRIUMPH SPRINT ST 1050'"}}],[{"Literal":{"Value":"'TRIUMPH STREET SCRAMBLER'"}}],[{"Literal":{"Value":"'TRIUMPH STREET TRIPLE'"}}],[{"Literal":{"Value":"'Triumph THRUXTON'"}}],[{"Literal":{"Value":"'TRIUMPH THUNDERBIRD'"}}],[{"Literal":{"Value":"'Triumph TIGER'"}}],[{"Literal":{"Value":"'TRIUMPH TRIDENT'"}}]]}}},{"DisplayName":"VAUXHAUL","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'VAUXHALL ADAM'"}}],[{"Literal":{"Value":"'VAUXHALL AGILA'"}}],[{"Literal":{"Value":"'VAUXHALL ANTARA'"}}],[{"Literal":{"Value":"'VAUXHALL ASTRA'"}}],[{"Literal":{"Value":"'VAUXHALL ASTRAVAN'"}}],[{"Literal":{"Value":"'VAUXHALL CASCADA'"}}],[{"Literal":{"Value":"'VAUXHALL COMBO'"}}],[{"Literal":{"Value":"'VAUXHALL CORSA'"}}],[{"Literal":{"Value":"'VAUXHALL CROSSLAND'"}}],[{"Literal":{"Value":"'VAUXHALL FRONTERA'"}}],[{"Literal":{"Value":"'VAUXHALL GRANDLAND'"}}],[{"Literal":{"Value":"'VAUXHALL INSIGNIA'"}}],[{"Literal":{"Value":"'VAUXHALL MERIVA'"}}],[{"Literal":{"Value":"'VAUXHALL MODEL MISSING'"}}],[{"Literal":{"Value":"'VAUXHALL MOKKA'"}}],[{"Literal":{"Value":"'VAUXHALL MOVANO'"}}],[{"Literal":{"Value":"'VAUXHALL OMEGA'"}}],[{"Literal":{"Value":"'VAUXHALL SIGNUM'"}}],[{"Literal":{"Value":"'VAUXHALL TIGRA'"}}],[{"Literal":{"Value":"'VAUXHALL VECTRA'"}}],[{"Literal":{"Value":"'VAUXHALL VIVA'"}}],[{"Literal":{"Value":"'VAUXHALL VIVARO'"}}],[{"Literal":{"Value":"'VAUXHALL ZAFIRA'"}}]]}}},{"DisplayName":"VAUXHAUL 2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'OPEL Model Missing'"}}]]}}},{"DisplayName":"VOLKSWAGEN","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'VOLKSWAGEN ARTEON'"}}],[{"Literal":{"Value":"'VOLKSWAGEN BEETLE'"}}],[{"Literal":{"Value":"'VOLKSWAGEN BORA'"}}],[{"Literal":{"Value":"'VOLKSWAGEN CADDY'"}}],[{"Literal":{"Value":"'VOLKSWAGEN CADDYMAXI'"}}],[{"Literal":{"Value":"'VOLKSWAGEN CARAVELLE'"}}],[{"Literal":{"Value":"'VOLKSWAGEN CC'"}}],[{"Literal":{"Value":"'VOLKSWAGEN CRAFTER'"}}],[{"Literal":{"Value":"'VOLKSWAGEN EOS'"}}],[{"Literal":{"Value":"'VOLKSWAGEN FOX'"}}],[{"Literal":{"Value":"'VOLKSWAGEN GOLF'"}}],[{"Literal":{"Value":"'VOLKSWAGEN HIGH UP'"}}],[{"Literal":{"Value":"'VOLKSWAGEN ID3'"}}],[{"Literal":{"Value":"'VOLKSWAGEN ID4'"}}],[{"Literal":{"Value":"'VOLKSWAGEN JETTA'"}}],[{"Literal":{"Value":"'VOLKSWAGEN LT 35'"}}],[{"Literal":{"Value":"'VOLKSWAGEN LUPO'"}}],[{"Literal":{"Value":"'VOLKSWAGEN Model Missing'"}}],[{"Literal":{"Value":"'VOLKSWAGEN PASSAT'"}}],[{"Literal":{"Value":"'VOLKSWAGEN POLO'"}}],[{"Literal":{"Value":"'VOLKSWAGEN SCIROCCO'"}}],[{"Literal":{"Value":"'VOLKSWAGEN SHARAN'"}}],[{"Literal":{"Value":"'VOLKSWAGEN T-CROSS'"}}],[{"Literal":{"Value":"'VOLKSWAGEN TIGUAN'"}}],[{"Literal":{"Value":"'VOLKSWAGEN TOUAREG'"}}],[{"Literal":{"Value":"'VOLKSWAGEN TOURAN'"}}],[{"Literal":{"Value":"'VOLKSWAGEN TRANSPORTER'"}}],[{"Literal":{"Value":"'VOLKSWAGEN T-ROC'"}}],[{"Literal":{"Value":"'VOLKSWAGEN UP'"}}],[{"Literal":{"Value":"'VOLKSWAGEN UP BY'"}}],[{"Literal":{"Value":"'VOLKSWAGEN URBAN'"}}]]}}},{"DisplayName":"VOLVO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'VOLVO 850'"}}],[{"Literal":{"Value":"'VOLVO C 30'"}}],[{"Literal":{"Value":"'VOLVO C30'"}}],[{"Literal":{"Value":"'VOLVO C70'"}}],[{"Literal":{"Value":"'VOLVO MODEL MISSING'"}}],[{"Literal":{"Value":"'VOLVO S40'"}}],[{"Literal":{"Value":"'VOLVO S60'"}}],[{"Literal":{"Value":"'VOLVO S80'"}}],[{"Literal":{"Value":"'VOLVO S90'"}}],[{"Literal":{"Value":"'VOLVO V40'"}}],[{"Literal":{"Value":"'VOLVO V50'"}}],[{"Literal":{"Value":"'VOLVO V60'"}}],[{"Literal":{"Value":"'VOLVO V70'"}}],[{"Literal":{"Value":"'VOLVO V90'"}}],[{"Literal":{"Value":"'VOLVO XC40'"}}],[{"Literal":{"Value":"'VOLVO XC60'"}}],[{"Literal":{"Value":"'VOLVO XC70'"}}],[{"Literal":{"Value":"'VOLVO XC90'"}}]]}}},{"DisplayName":"YAMAHA","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"generic_make_model"}}],"Values":[[{"Literal":{"Value":"'Yamaha BWS 125'"}}],[{"Literal":{"Value":"'YAMAHA CS 50 JOG'"}}],[{"Literal":{"Value":"'YAMAHA DELIGHT'"}}],[{"Literal":{"Value":"'YAMAHA DELIGHT 125'"}}],[{"Literal":{"Value":"'YAMAHA DT'"}}],[{"Literal":{"Value":"'YAMAHA DT 125 R'"}}],[{"Literal":{"Value":"'YAMAHA FJR'"}}],[{"Literal":{"Value":"'YAMAHA FJR 1300'"}}],[{"Literal":{"Value":"'YAMAHA FZ'"}}],[{"Literal":{"Value":"'Yamaha FZ1'"}}],[{"Literal":{"Value":"'Yamaha FZ6'"}}],[{"Literal":{"Value":"'Yamaha FZ8'"}}],[{"Literal":{"Value":"'YAMAHA FZS'"}}],[{"Literal":{"Value":"'YAMAHA FZS 1000'"}}],[{"Literal":{"Value":"'YAMAHA FZS 600'"}}],[{"Literal":{"Value":"'YAMAHA GPD'"}}],[{"Literal":{"Value":"'YAMAHA GPD 125'"}}],[{"Literal":{"Value":"'YAMAHA HW'"}}],[{"Literal":{"Value":"'YAMAHA MODEL MISSING'"}}],[{"Literal":{"Value":"'YAMAHA MT'"}}],[{"Literal":{"Value":"'YAMAHA MT07'"}}],[{"Literal":{"Value":"'YAMAHA MT09'"}}],[{"Literal":{"Value":"'YAMAHA MT10'"}}],[{"Literal":{"Value":"'YAMAHA MT125'"}}],[{"Literal":{"Value":"'YAMAHA MW'"}}],[{"Literal":{"Value":"'YAMAHA MW125'"}}],[{"Literal":{"Value":"'YAMAHA MWS'"}}],[{"Literal":{"Value":"'YAMAHA MWS125'"}}],[{"Literal":{"Value":"'YAMAHA NS'"}}],[{"Literal":{"Value":"'YAMAHA NS 50'"}}],[{"Literal":{"Value":"'YAMAHA NXC'"}}],[{"Literal":{"Value":"'YAMAHA NXC 125'"}}],[{"Literal":{"Value":"'YAMAHA R'"}}],[{"Literal":{"Value":"'YAMAHA R6'"}}],[{"Literal":{"Value":"'YAMAHA SR 125'"}}],[{"Literal":{"Value":"'YAMAHA TDM 900'"}}],[{"Literal":{"Value":"'YAMAHA TRACER'"}}],[{"Literal":{"Value":"'YAMAHA WR'"}}],[{"Literal":{"Value":"'YAMAHA WR 125'"}}],[{"Literal":{"Value":"'YAMAHA X'"}}],[{"Literal":{"Value":"'YAMAHA XC'"}}],[{"Literal":{"Value":"'YAMAHA XC 125'"}}],[{"Literal":{"Value":"'YAMAHA XC115'"}}],[{"Literal":{"Value":"'YAMAHA XJ'"}}],[{"Literal":{"Value":"'Yamaha XJ6'"}}],[{"Literal":{"Value":"'YAMAHA XJR'"}}],[{"Literal":{"Value":"'YAMAHA XJR 1300'"}}],[{"Literal":{"Value":"'YAMAHA X-MAX'"}}],[{"Literal":{"Value":"'YAMAHA X-MAX 125'"}}],[{"Literal":{"Value":"'YAMAHA X-MAX 300'"}}],[{"Literal":{"Value":"'YAMAHA XP'"}}],[{"Literal":{"Value":"'YAMAHA XP 500'"}}],[{"Literal":{"Value":"'YAMAHA XSR'"}}],[{"Literal":{"Value":"'YAMAHA XSR 700'"}}],[{"Literal":{"Value":"'YAMAHA XT'"}}],[{"Literal":{"Value":"'Yamaha XT 125'"}}],[{"Literal":{"Value":"'YAMAHA XT 600'"}}],[{"Literal":{"Value":"'YAMAHA XVS'"}}],[{"Literal":{"Value":"'YAMAHA XVS 950'"}}],[{"Literal":{"Value":"'YAMAHA YBR'"}}],[{"Literal":{"Value":"'YAMAHA YBR 125'"}}],[{"Literal":{"Value":"'YAMAHA YN 50 NEOS'"}}],[{"Literal":{"Value":"'YAMAHA YP'"}}],[{"Literal":{"Value":"'YAMAHA YP 125'"}}],[{"Literal":{"Value":"'YAMAHA YP 250 R'"}}],[{"Literal":{"Value":"'YAMAHA YP 400'"}}],[{"Literal":{"Value":"'YAMAHA YQ 50 AEROX'"}}],[{"Literal":{"Value":"'YAMAHA YS'"}}],[{"Literal":{"Value":"'YAMAHA YS 125'"}}],[{"Literal":{"Value":"'YAMAHA YZF'"}}],[{"Literal":{"Value":"'YAMAHA YZF 600 R'"}}],[{"Literal":{"Value":"'YAMAHA YZF R1'"}}],[{"Literal":{"Value":"'YAMAHA YZF R125'"}}],[{"Literal":{"Value":"'YAMAHA YZF R3'"}}],[{"Literal":{"Value":"'YAMAHA YZF R6'"}}]]}}},{"DisplayName":"Other"}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Model Groups Hierarchy'
+		lineageTag: 897b3f4f-7ffe-447c-a243-3b2fbf0d45be
+
+		level 'Model Groups'
+			lineageTag: 62ac0561-8697-4cd2-bf5c-01cdd7c5948f
+			column: 'Model Groups'
+
+		level generic_make_model
+			lineageTag: 94cd96d3-97ca-4a9b-b76a-e7aac660623c
+			column: generic_make_model
+
+	partition vehicles = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\robbin_vernooij\Downloads\drive-download-20231025T140801Z-001\vehicle_data.xlsx"), null, true),
+				    vehicles_Sheet = Source{[Item="vehicles",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(vehicles_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"accident_index", type text}, {"accident_year", Int64.Type}, {"accident_reference", type text}, {"vehicle_reference", Int64.Type}, {"age_of_driver", Int64.Type}, {"engine_capacity_cc", Int64.Type}, {"age_of_vehicle", Int64.Type}, {"generic_make_model", type text}, {"vehicle_manoeuvre", type text}, {"vehicle_type", type text}, {"junction_location", type text}, {"vehicle_direction_to", type text}, {"vehicle_leaving_carriageway", type text}, {"towing_and_articulation", type text}, {"journey_purpose_of_driver", type text}, {"hit_object_off_carriageway", type text}, {"propulsion_code", type text}, {"vehicle_location_restricted_lane", type text}, {"driver_home_area_type", type text}, {"skidding_and_overturning", type text}, {"hit_object_in_carriageway", type text}, {"driver_imd_decile", type text}, {"first_point_of_impact", type text}, {"vehicle_left_hand_drive", type text}, {"age_band_of_driver", type text}, {"vehicle_direction_from", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([generic_make_model] <> "-1") and ([vehicle_type] = "Car"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

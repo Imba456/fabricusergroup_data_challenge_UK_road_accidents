@@ -1,0 +1,20 @@
+relationship d4a12fe4-b2cb-43c3-a8d9-a899530678ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: collisions.date
+	toColumn: LocalDateTable_a9f148f5-4141-440a-84f2-394797ec7b73.Date
+
+relationship d5546d72-484e-4d20-bc5f-92b9128a8684
+	crossFilteringBehavior: bothDirections
+	fromColumn: vehicles.accident_index
+	toColumn: collisions.accident_index
+
+relationship 0a18585d-6010-460f-9baf-f351cb2acf18
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Location Binning'.'Relation Location'
+	toColumn: collisions.'Relation Location'
+
+relationship 15b75e52-a810-44ca-84fe-41e4be81a83c
+	fromColumn: collisions.'date key'
+	toColumn: _Dates.DateKey
+
